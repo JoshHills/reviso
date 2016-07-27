@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<!-- HTML5 preferred for shiny new features! -->
+<html lang="en">
+    
+    <head>
+        
+        <title>Reviso</title>
+        
+        <!-- Website title and meta information provided for potential scraper-bots and search engine display, as well as completeness. -->
+        <meta charset="UTF-8">
+        <meta name="description" content="Online technological tutoring to track your progress to the top!">
+        <meta name="keywords" content="Tutorial, HTML, CSS, JavaScript">
+        <meta name="author" content="Josh Hills">
+        
+        <!-- Import main stylesheet, page-specific stylesheet and a responsive stylesheet. -->
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/index.css" />
+        <link rel="stylesheet" href="css/main-responsive.css" />
+        
+            <!-- Load plugins & scripts. -->
+        
+        <!-- jQuery -->
+        <script src="plugins/jquery-1.11.2.min.js"></script> 
+        
+        <!-- Highlight.js -->
+        <script src="plugins/highlight.pack.min.js"></script>
+        <link rel="stylesheet" href="plugins/default.min.css" />
+        
+        <!-- Load external operation scripts. -->
+        <script src="scripts/local-information.js"></script>
+        <script src="scripts/tooltip.js"></script>
+        <script src="scripts/user-operations.js"></script>
+        <script src="scripts/page-operations.js"></script>
+        <script src="scripts/sections/index.js"></script>
+        
+        <!-- Link site's favicon to aid browser display. -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        
+        <!-- Force page refresh every half-hour to load potential profile updates to display. -->
+        <meta http-equiv="refresh" content="1800">
+        
+    </head>
+
+    <body id="index">
+
+        <!-- Navigation bar. -->
+        <div id="nav-container">
+            
+            <div id="nav-bar">
+
+                <a href="index.html"><img id="logo" src="images/logo.png" alt="Reviso logo" /></a>
+
+                <ul id="site-map">
+                    <li class="active"><a href="index.html">Topics</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+
+                <div id="logotag"><img src="images/logotag-1.png" alt="Web Technologies" /></div>
+
+            </div>
+            
+        </div>
+        
+        <!-- Alert bar. -->
+        <div id="alert-container">
+            <div id="alert-bar">
+                <p id="alert-text"></p><button onclick="hideAlert()">x</button>
+            </div>
+        </div>
+        
+        <!-- Main content block. -->
+        <div class="container">
+        
+            <!-- Section provides user-information. -->
+            <div id="info-panel">
+                
+                <div id="profile-container" class="content-box">
+
+                    <div id="profile-name">
+
+                        <h1 id="user-name">Guest</h1>
+                        <img src="images/profile-box/delete-icon.png" alt="Reset Profile Icon" onclick="resetProfile()" />
+                        <img id="settings-icon" src="images/profile-box/settingsicon.png" alt="Settings cog." title="Change your username." onclick="initPrompts()" />
+
+                    </div>
+
+                    <div id="streak">
+                        <img src="images/profile-box/streak-icon.png" alt="Streak Icon." />
+                        <p>Streak: <span id="streak-days">0</span> Days</p>
+                    </div>
+
+                    <hr />
+
+                    <div id="stat-container">
+
+                        <div id="stat-header">
+                            <p>Stats:</p>
+                            <img id="arrow-icon" src="images/profile-box/unexpandedarrowicon.png" alt="Arrow icon." />
+                        </div>
+
+                        <div id="data-container">
+
+                            <table id="statistics">
+                            
+                                <tr>
+                                    <td>Questions Answered:</td>
+                                    <td><span id="questions-answered" class="statistic">0</span></td>                                
+                                </tr>
+                                <tr>
+                                    <td>Overall Completion:</td>
+                                    <td><span id="overall-completion" class="statistic">0</span>%</td>
+                                </tr>
+                                <tr>
+                                    <td>Date Started:</td>
+                                    <td><span id="date-started" class="statistic">00/00/0000</span></td>
+                                </tr>
+                            
+                            </table>
+                            
+                            <p><a href="http://twitter.com/intent/tweet?text=I%27m%20using%20%27Reviso%27%2C%20a%20fun%20new%20online%20technology%20course%21%20&amp;url=&amp;hashtags=learning&amp;original_referer=">Share your experience on social media!</a></p>
+
+                        </div>
+
+                    </div>
+
+                    <hr />
+
+                    <div id="day-counter">
+
+                        <div id="calendar">
+
+                            <p id="days-remaining">28</p>
+
+                        </div>
+
+                        <p>days until your examination in this module.<br /><br />Good luck!</p>
+
+                    </div>
+
+                </div>       
+
+                <div id="extra-links">
+                
+                    <a href="extra-resources.html" class="div-link"></a>
+                    <h1>More resources!</h1>
+                    <p>click for more info</p>
+                    
+                </div>
+
+            </div>
+            
+            <!-- Section provides course information. -->
+            <div id="topic-container" class="content-box">
+                
+                <div id="message-box" class="topic-box">
+                
+                    <p id="message-name" class="topic-name">Welcome!</p>
+                    <p id="message-content" class="topic-description">
+                        Choose an available course-content topic by hovering over each picture and perusing its details; when you're ready to dive in, click on it!<br /><br />When you've completed a topic, you can take a test.<br /><br />Radical!     
+                    </p>
+                
+                </div>
+                
+                <!-- Consistent div-structure allows for blanketed styling. -->
+                <div id="architecture" class="topic-box">
+                
+                    <a href="architecture-1.html" class="div-link"></a>
+                    
+                    <img src="images/topic-boxes/topic-web-architecture.png" alt="Picture describing the topic." />
+                    
+                    <div class="topic-details">
+                        
+                        <p class="topic-name">Web Architecture</p>
+                        <p class="topic-description">
+                        Gain an understanding of how the internet actually works; this topic covers web-protocol, servers, and other fundamental faucets of the intricate network that interlocks our communicational devices everywhere.
+                        </p>
+                        <p class="topic-difficulty">
+                        Beginner                    
+                        </p>
+                        
+                    </div>
+                    
+                    <div class="completion-bar">
+                        <img src="images/topic-boxes/completion-bar.png" alt="A completion bar." />
+                        <p class="unviewed">Take a look!</p>
+                    </div>
+                        
+                </div>
+                
+                <div id="html" class="topic-box">
+                    
+                    <a href="html-1.html" class="div-link"></a>
+                    
+                    <img src="images/topic-boxes/topic-html.png" alt="Picture describing the topic." />
+                
+                    <div class="topic-details">
+                        
+                        <p class="topic-name">HTML</p>
+                        <p class="topic-description">
+                            Discover the building blocks of every website; learn the syntax to construct your own masterpiece of data-display, and the fundamental principles in applying it.
+                        </p>
+                        <p class="topic-difficulty">
+                            Beginner                    
+                        </p>
+                        
+                    </div>
+                
+                    <div class="completion-bar">
+                        <img src="images/topic-boxes/completion-bar.png" alt="A completion bar." />
+                        <p class="unviewed">Take a look!</p>
+                    </div>
+                    
+                </div>
+                
+                <div id="standards" class="topic-box">
+                    
+                    <a href="standards-1.html" class="div-link"></a>
+                    
+                    <img src="images/topic-boxes/topic-standards.png" alt="Picture describing the topic." />
+                
+                    <div class="topic-details">
+                        
+                        <p class="topic-name">Standards</p>
+                        <p class="topic-description">
+                            Understand the standards you'll be abiding by in the interest of professionalism and concurrence of functionality; this topic covers the various industry-standard pre-requisites underlying every line of code.
+                        </p>
+                        <p class="topic-difficulty">
+                            Intermediate                    
+                        </p>
+                        
+                    </div>
+                
+                    <div class="completion-bar">
+                        <img src="images/topic-boxes/completion-bar.png" alt="A completion bar." />
+                        <p class="unviewed">Take a look!</p>
+                    </div>
+                    
+                </div>
+                
+                <div id="css" class="topic-box">
+                    
+                    <a href="css-1.html" class="div-link"></a>
+                    
+                    <img src="images/topic-boxes/topic-css.png" alt="Picture describing the topic." />
+                    
+                    <div class="topic-details">
+                        
+                        <p class="topic-name">CSS</p>
+                        <p class="topic-description">
+                            Time for a lick of paint! This topic guides you through the illustrious manifestation of creative flair in the form of cascading-style-sheet specifications- ergo, how to make your content visually impressive.
+                        </p>
+                        <p class="topic-difficulty">
+                            Intermediate                    
+                        </p>
+                        
+                    </div>
+                
+                    <div class="completion-bar">
+                        <img src="images/topic-boxes/completion-bar.png" alt="A completion bar." />
+                        <p class="unviewed">Take a look!</p>
+                    </div>        
+                    
+                </div>
+                
+                <div id="javascript" class="topic-box">
+                    
+                    <a href="javascript-1.html" class="div-link"></a>
+                    
+                    <img src="images/topic-boxes/topic-javascript.png" alt="Picture describing the topic." />
+                
+                    <div class="topic-details">
+                        
+                        <p class="topic-name">Javascript</p>
+                        <p class="topic-description">
+                            Make your website interative and adaptive with a powerful, ubiquitous scripting language. This topic forges the foundations necessary to supplement your content with programming that will bring it to life.
+                        </p>
+                        <p class="topic-difficulty">
+                            Advanced                    
+                        </p>
+                        
+                    </div>
+                    
+                    <div class="completion-bar">
+                        <img src="images/topic-boxes/completion-bar.png" alt="A completion bar." />
+                        <p class="unviewed">Take a look!</p>
+                    </div>
+                
+                </div>
+            
+            </div>
+            
+            <!-- Footer consistent per-page. -->
+            <div id="footer">
+
+                <ul id="footer-links">
+                
+                    <li><a href="snippet-glossary.html">Code Glossary</a></li>
+                    <li><a href="javascript:toggleSound()">Sound On/Off</a></li>
+                    <li><a href="javascript:viewSource()">View Page Source</a></li>
+                    <li><a href="javascript:viewTerms()">Terms</a></li>
+                    <li>© <a target="_blank" href="http://github.com/JoshHills">Josh 'Averington' Hills</a>, <a target="_blank" href="http://www.symbiopticstudios.co.uk/">Symbiopticstudios</a>, 2015 <a target="_blank" href="http://www.ncl.ac.uk/undergraduate/modules/module/CSC1026/">for Newcastle University</a></li>
+                
+                </ul>
+                
+            </div>
+            
+        </div>
+    
+    </body>
+    
+</html>

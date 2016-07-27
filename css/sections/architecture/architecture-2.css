@@ -1,0 +1,58 @@
+/* File encapsulates the bespoke CSS demonstrations for this page. */
+
+#methods {
+    
+    display: inline-block;
+    padding: 40px;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    max-width: 500px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    
+}
+
+@media screen and (max-width: 985px) { #methods { margin: 0; float: none; } }
+
+#methods *:last-child { margin-bottom: 0; }
+
+#methods select {
+    
+    font-size: 16pt;
+    padding: 10px;
+    border-radius: 10px;
+    
+}
+
+.message { width: 100%; }
+
+.green { color: #50E63C; }
+.red { color: #FF0000; }
+
+.description { display: none; }
+.visible { display: block; }
+
+#random-responses {
+    
+    text-align: center;   
+    
+}
+
+#response-generator {
+    
+    padding: 10px;
+    
+    font-size: 14pt;
+    
+    background-color: transparent;    
+    color: #ffffff;    
+    border: 1px solid white;    
+    border-radius: 10px;
+    
+}
+
+#questions {
+    
+    text-align: left;   
+    
+}

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <head>
+        
+        <title>HTML Closer Look</title>
+        
+        <meta charset="UTF-8" />
+        <meta name="author" content="Josh Hills" />
+        
+        <!-- Import main stylesheet, page-specific stylesheet (if necessary) and a responsive stylesheet. -->
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/main-responsive.css" />
+        <link rel="stylesheet" href="css/sections/html/html-2.css" />
+        
+            <!-- Load plugins & scripts. -->
+        
+        <!-- jQuery -->
+        <script src="plugins/jquery-1.11.2.min.js"></script> 
+        
+        <!-- Highlight.js -->
+        <script src="plugins/highlight.pack.min.js"></script>
+        <link rel="stylesheet" href="plugins/default.min.css" />
+        
+        <!-- Load external operation scripts. -->
+        <script src="scripts/local-information.js"></script>
+        <script src="scripts/tooltip.js"></script>
+        <script src="scripts/question-classes.js"></script>
+        <!-- <script src="scripts/questions/html-2.js"></script> -->
+        <script src="scripts/user-operations.js"></script>
+        <script src="scripts/progress-bar.js"></script>
+        <script src="scripts/page-operations.js"></script>
+        
+        <!-- Link site's favicon to aid browser display. -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        
+    </head>
+
+    <body id="html-2">
+
+        <!-- Navigation bar. -->
+        <div id="nav-container">
+            
+            <div id="nav-bar">
+
+                <a href="index.html"><img id="logo" src="images/logo.png" alt="Reviso logo" /></a>
+
+                <ul id="site-map">
+                    <li ><a href="index.html">Topics</a></li>
+                    <li ><a href="about.html">About</a></li>
+                </ul>
+                
+                <div id="progress-bar"></div>
+
+            </div>
+            
+        </div>
+        
+        <!-- Alert bar. -->
+        <div id="alert-container">
+            <div id="alert-bar">
+                <p id="alert-text"></p><button onclick="hideAlert()">x</button>
+            </div>
+        </div>
+        
+        <!-- Main content block. -->
+        <div class="container">
+            
+            <div class="content-box">
+
+                <div class="header">
+                    <img src="images/topic-headers/html-2.png" class="header-image" alt="'About' header image." />
+                    <h2 >HTML: Closer Look</h2>
+                </div>
+                
+                <div class="dark">
+                    <p>
+                        Time to get our hands dirty! This is where it gets exciting- writing your first website is the web-developer's equivalent of the programmer's 'hello world'- by the end of this course, you should be aiming to be both (you talented individual, you)! Correct structure is incredibly important, as what you provide is what's going to be processed, and you want to ensure that it's processed <a class="peekable">correctly</a><span>unless you'd class a broken website as 'art', or something weird like that</span><span></span>. The rulesets we just talked about aren't just hearsay suggestions- the W3C actually publishes a '<em>Document Type Definition</em>' for each release of HTML, which defines exactly what is and isn't <strong>right</strong>. Let's explore the right...
+                    </p>
+                </div>
+                
+                <p>
+                    For posterity, <a href="http://www.w3.org/TR/html401/sgml/dtd.html">these DTDs</a> should be at least glanced at, but they're becoming almost <a class="peekable">flaunted</a><span>html5 has actually been designed so that writing a dtd for it is impossible- due to certain self-defined elements, it would have to be technically infinite</span><span></span> in this future of ours. Disregarding their technicalities, each HTML document should still include certain things...
+                </p>
+                
+                <img src="images/sections/html/clipboard.png" alt="Check-list." class="right" />
+                
+                <h3>What do I need?</h3>
+                
+                <p>
+                    There are three important things:
+                </p>
+                
+                <ul>
+                    <li>A line containing language information (what language, which <a class="peekable">version</a><span>in html5, this is much more simple- <code>&lt;!DOCTYPE html&gt;</code></span><span></span>).</li>
+                    <li>A declarative header section that provides meta information about the document- this serves as a precursor to...</li>
+                    <li>A body of content!</li>
+                </ul>
+                
+                <p>
+                    <em>The second two should be wrapped in an <code class="inline-code">&lt;html&gt;</code> tag.</em>
+                </p>
+                
+                <p>
+                    You can see this displayed in the example document below. You can write HTML in any text editor as long as you save the file with correct file <a class="peekable">extension</a><span>.html</span><span></span>, however you could also use something useful like an <a class="peekable">IDE</a><span>independent development environment - a text-editor on steroids</span><span></span>; whatever you decide to use, it'll just be a matter of productivity. You can find suggestions for tools and community resource-pools on the <a href="extra-resources.html#utilities">extra resources page</a>.
+                </p>
+                
+            </div>
+            
+            <div class="content-box-code">
+            
+                <h3>Example HTML Document:</h3>
+                
+                <p>
+                    <em>As you should be able to see, this simple document provides the content while at the same time abiding by the three necessary rules above.</em>
+                </p>
+                
+                <pre><code id="html-2-1-exampledoc" class="load inline-code"></code></pre>
+            
+            </div>
+            
+            <div class="content-box">
+            
+                <h3>The Bare Necessities:</h3>
+                
+                <img src="images/sections/html/tag.png" alt="Tag." class="left" />
+                
+                <p>
+                    We touched brielfy on tags, classes and attributes. Kudos for remembering. Well, did you know there are two kinds of tags? '<strong>Block-level</strong>' <a class="peekable">tags</a><span>such as <code>&lt;div&gt;</code></span><span></span> and '<strong>inline</strong>' <a class="peekable">tags</a><span>such as <code>&lt;br /&gt;</code></span><span></span>. The difference is that block-level tags construct the overall shape of the document, and inline tags, which can be nested inside, more specifically focus the content at a minute level. Let's look at the most useful examples!
+                </p>
+                
+                <hr />
+                
+                <h3>Block Level</h3>
+                
+                <img src="images/sections/html/home.png" alt="House." class="right" />
+                
+                <p>
+                    <strong>Headings:</strong> <code class="inline-code">&lt;h1&gt; &lt;h2&gt; &lt;h3&gt; &lt;h4&gt; &lt;h5&gt; &lt;h6&gt;</code>
+                </p>
+                <p>
+                    Headings are a very important component in a page because they break up the content into chunks- they allow for quick scanning, and are also considerate for those who use screen readers. They're useful to pivot off, and as we'll see later, are useful in literal page navigation.
+                </p>
+            
+                <p>
+                    <strong>Paragraphs and Breaks:</strong> <code class="inline-code">&lt;p&gt; &lt;br /&gt; &lt;hr /&gt;</code>
+                </p>
+                <p>
+                    Paragraphs and breaks are the most important containers in a web-page, as they will server to shepherd and seperate the bulk of your website's content.
+                </p>
+                
+                <img src="images/sections/html/groceries.png" alt="Groceries." class="left" />
+                
+                <p>
+                    <strong>Lists:</strong> <code class="inline-code">&lt;ul&gt; &lt;ol&gt; &lt;li&gt; &lt;dl&gt; &lt;dt&gt; &lt;dd&gt;</code>
+                </p>
+                <p>
+                    Lists are important aspects of any document- to string points together, or simply provide many at the same time. Three types of lists are supported by HTML - 'unordered lists' which display with bullet points, 'ordered lists' which display with numbers (both of which use 'list items' for their individual points), and 'definition lists', which link definition titles to their descriptions. Interestingly, they can be used unconventially to display things like navigation-bars, and similarly grouped elements. For clarity, they look like this:
+                </p>
+                
+                <pre><code id="html-2-2-list" class="load inline-code"></code></pre>
+                
+                <hr />
+                
+                <h3>Inline</h3>
+                
+                <img src="images/sections/html/queue.png" alt="Queue." class="right" />
+                
+                <p>
+                    These logical tags often supply semantic meaning by telling the client to render the element uniquely- they allow for a consistent visual disparity between content, whether it be for emphasis, or to provide additional functionality such as embedding hyperlinks. To use them, simply wrap the text you want to delineate around them.
+                </p>
+                
+                <p>
+                    <strong>Logical:</strong> <code class="inline-code">&lt;em&gt; &lt;strong&gt; &lt;code&gt; &lt;cite&gt;</code>
+                </p>
+                <p>
+                    <em>Which</em> <strong>look</strong> <code>like</code> <cite>this!</cite> They quite obviously suit their specific purposes.
+                </p>         
+                
+                <p>
+                    <strong>Physical:</strong> <code class="inline-code">&lt;b&gt; &lt;u&gt; &lt;s&gt; &lt;i&gt;</code>
+                </p>
+                <p>
+                    These 'physical' tags are outdated, however are still used online- usually in comment-boxes that would like to permit you some minimal styling, but wont let you fiddle with their stylesheets.
+                </p> 
+                
+            </div>
+            
+            <div id="links" class="content-box demo-box">
+                
+                <img src="images/sections/html/link.png" alt="Link icon." class="right" />
+            
+                <h3>Links:</h3>
+            
+                <p>
+                    Links at their basic are pretty easy to explain, but there's some interesting extra properties you can tweak that warrant inclusion! Defined as a connection from one web resource to another, links are vital in allowing the user to navigate your content, and also pointing to external resouces to make your website less enclosed- if somebody's took the time to compile an amazing foundry of information, you mightn't want to re-invent it for yourself in most instances.
+                </p>
+                
+                <p>
+                    As <a class="peekable">George Church</a><span>professor, harvard university; director in the personal genome project</span><span></span> detailed, "<em>the internet is amazing... for its connections. Going from footnotes  to hyptertext to search-engines dramatically opens doors for evidence-based thinking, modeling, and collaboration</em>". Concisely, openness is good stuff. 
+                </p>
+                
+                <p>
+                    A fully fledged link comes under the guise of the 'anchor' tag, and might look <code class="inline-code">&lt;a href="html-2.html#my-link" target="_self" id="my-link" &gt;<em>like this</em>&lt;a&gt;</code>, which would be displayed graphically <a href="html-2.html#my-link" target="_self" id="my-link">like this</a>!
+                </p>
+                
+                <p>
+                    You may have noticed above that the <a class="peekable">HREF</a><span>'hypermedia reference'</span><span></span> attribute points towards an element on this pages, using the fragmentation pattern '#' to pin-point IDs. Well done for noticing that! The browser creates the full URI for you, so you can provide relative filepaths to local resources- by taking advantages of the identifying attribute like this you improve your website a tad.
+                </p>
+                
+            </div>
+            
+            <div class="content-box">
+            
+                <h3>Tables, we're going to have to have a talk...</h3>
+                
+                <p>
+                    Tables, and their associated <a class="peekable">tags</a><span>&lt;table&gt; &lt;tr&gt; &lt;td&gt;...</span>, are a bit of a cause of contempt for many web-developers. There was a time when the internet's sole structural aesthetic was comprised of tables, but with the advent of cascading stylesheets, they've taken a secondary seat. The reason for this, and subsequently my reasoning for bothering to explain it, is that tables signify a key lesson in web-design; they're a perfect example of what people tend to do <em>wrong</em>.
+                </p>
+                
+                <div class="dark">
+                    
+                <div class="key-points right">
+                
+                    <table class="points">
+                    
+                            <tr><td>There exists a useful variety of HTML tags.</td></tr>
+                            <tr><td>Some of them are vital, and some encourage extra features.</td></tr>
+                        
+                    </table>
+                
+                </div>
+                
+                    <p>
+                        Using tables to provide <em>layout</em> for your content is generally frowned upon. This is because CSS wasn't meant to provide semantic-markup, rather, a lick of paint (as you'll see in a following topic). Tables are for tabular data- ergo, a specific purpose. As such, the only things you should really put in them are things such as statistics, or database-esque elements.
+                    </p>
+                        
+                    <p>
+                        Although small amounts of non-semantic markup for layout purposes are fine, relying upon this sort of ethos indefinitely or heavily will cause you inveitable headaches in the future.
+                    </p>
+                    
+                </div>
+                
+                <p>
+                    Enhancements can be added, however, to make your <strong>tabular</strong> data more pleasing to the eye- attributes such as <code>border, width, cellspacing and cellpadding</code> can be employed with ease to make your tables look as pretty as the key-points box above!
+                </p>
+            
+            </div>
+            
+            <div class="content-box-code">
+                
+                <h3>A Compilation:</h3>
+                
+                <p>
+                    The examples below use a lot of the tags we've already inspected, and show both the code itself and the visual rendering of the code devoid of any styling.
+                </p>
+            
+                <pre><code id="html-2-2-exampledoc" class="load inline-code left"></code></pre>
+                
+                <iframe src="scripts/sections/html-2.html">Your browser does not support 'iframe' elements! Bummer!</iframe>
+                
+                <p>
+                    <em>It's favourable to open your file frequently throughout the process of writing its code- this helps you ensure that it looks right on the screen. You can see that, even without styling, the information is still conveyed effectively, if a little blandly.</em>
+                </p>
+            
+            </div>
+            
+            <!-- Section navigation. -->
+            <a href="html-1.html" class="nav-button left">Back</a>
+            <a href="html-3.html" class="nav-button right">Next</a>
+
+            <!-- Footer consistent per-page. -->
+            <div id="footer">
+
+                <ul id="footer-links">
+
+                    <li><a href="snippet-glossary.html">Code Glossary</a></li>
+                    <li><a href="javascript:toggleSound()">Sound On/Off</a></li>
+                    <li><a href="javascript:viewSource()">View Page Source</a></li>
+                    <li><a href="javascript:viewTerms()">Terms</a></li>
+                    <li>© <a target="_blank" href="http://github.com/JoshHills">Josh 'Averington' Hills</a>, <a target="_blank" href="http://www.symbiopticstudios.co.uk/">Symbiopticstudios</a>, 2015 <a target="_blank" href="http://www.ncl.ac.uk/undergraduate/modules/module/CSC1026/">for Newcastle University</a></li>
+
+                </ul>
+
+            </div>
+            
+        </div>
+
+    </body>
+    
+</html>

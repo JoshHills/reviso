@@ -1,0 +1,20 @@
+img.half-fill {
+    
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    
+}
+
+p.half-fill {
+    
+    width: 50%;   
+    
+}
+
+hr {
+ 
+    margin-bottom: 35px;
+    
+}

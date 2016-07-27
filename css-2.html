@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <head>
+        
+        <title>CSS Closer Look</title>
+        
+        <meta charset="UTF-8" />
+        <meta name="author" content="Josh Hills" />
+        
+        <!-- Import main stylesheet, page-specific stylesheet (if necessary) and a responsive stylesheet. -->
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/main-responsive.css" />
+        <link rel="stylesheet" href="css/sections/css/css-2.css" />
+        
+            <!-- Load plugins & scripts. -->
+        
+        <!-- jQuery -->
+        <script src="plugins/jquery-1.11.2.min.js"></script> 
+        
+        <!-- Highlight.js -->
+        <script src="plugins/highlight.pack.min.js"></script>
+        <link rel="stylesheet" href="plugins/default.min.css" />
+        
+        <!-- Load external operation scripts. -->
+        <script src="scripts/local-information.js"></script>
+        <script src="scripts/tooltip.js"></script>
+        <script src="scripts/question-classes.js"></script>
+        <script src="scripts/user-operations.js"></script>
+        <script src="scripts/progress-bar.js"></script>
+        <script src="scripts/page-operations.js"></script>
+        <script src="scripts/sections/css-2.js"></script>
+        
+        <!-- Link site's favicon to aid browser display. -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        
+    </head>
+
+    <body id="css-2">
+
+        <!-- Navigation bar. -->
+        <div id="nav-container">
+            
+            <div id="nav-bar">
+
+                <a href="index.html"><img id="logo" src="images/logo.png" alt="Reviso logo" /></a>
+
+                <ul id="site-map">
+                    <li ><a href="index.html">Topics</a></li>
+                    <li ><a href="about.html">About</a></li>
+                </ul>
+                
+                <div id="progress-bar"></div>
+
+            </div>
+            
+        </div>
+        
+        <!-- Alert bar. -->
+        <div id="alert-container">
+            <div id="alert-bar">
+                <p id="alert-text"></p><button onclick="hideAlert()">x</button>
+            </div>
+        </div>
+        
+        <!-- Main content block. -->
+        <div class="container">
+            
+            <div class="content-box">
+
+                <div class="header">
+                    <img src="images/topic-headers/css-2.png" class="header-image" alt="'About' header image." />
+                    <h2 >CSS: Closer Look</h2>
+                </div>
+                
+                <div class="dark">
+                    <p>
+                        In this section, having covered the technical trickery of CSS, we’ll delve into some specific aspects that allow you to take full advantage of its features. The topics you’d likely most favour in this regard would be <strong>colour</strong> and <strong>size</strong>, as they allow you to finally inject some <em>personality</em> into your pages- with basic colour and sizing even the most anti-artisanal individual can produce pleasing spreads that are easy on the ol’ eyeballs! Also recieving an honourable mentino are pseudo-elements, which provide selectors for specially targeted parts of your DOM to perform stylings upon. You dig?
+                    </p>
+                </div>
+                
+                <h3>Colour me surprised...</h3>
+                
+                <div class="key-points right">
+                
+                    <table class="points">
+                    
+                            <tr><td>CSS is infinitely customisable.</td></tr>
+                            <tr><td>It provides lots of alternatives to fit specific scenarios.</td></tr>
+                            <tr><td>Often, visual improvements aren't just superflous: structural representation is key to proper transmission of information (that was deep!).</td></tr>
+                        
+                    </table>
+                
+                </div>
+                
+                <p>
+                    Colouring your document is a tough design choice to make. You may want to take advantage of <a href="http://paletton.com/" target="_blank">web-apps that create palettes for you</a>, but planning without implementation equates to nothing more than fevered-dreams. In CSS, you can utilise <a class="peekable">more</a><span>the combination of red, green and blue values from 0 to 255 gives a total of more than 16 million different colors to play with! (256 x 256 x 256)</span><span></span> colours than the ‘pantone’ <a href="http://www.pantone-colours.com/" target="_blank">catalogue</a>- using equally as <em>pretentious</em> identifiers. There are <strong>140</strong> colour <a class="peekable">names</a><span>of which 17 are solidly standardised cross-platform</span><span></span> <a href="http://colours.neilorangepeel.com/" target="_blank">pre-defined in CSS</a>. If you want to be more specific, or you’re using a colour-picker such as an image-editor's ‘eye-dropper’ tool, you can also specify the <em>RGB</em>, <em>RGBA</em>, or <em>HEX</em> of a <a class="peekable">colour</a><span>you can also add gradients to blend between these colours, but they’re a bit fiddly!</span><span></span>. All of the rules below are equivalent:
+                </p>
+                
+                <pre><code id="css-2-1-colours" class="load inline-code css"></code></pre>
+                
+                <hr />
+                
+                <p>
+                    The alpha layer in RGBA excites me. I’m not sure why. Wait, where was I? Oh, right. Colours can be applied to a wide variety of things- there’re plenty of rules that accommodate them:
+                </p>
+                
+                <p><code class="inline-code css">border-color, background-color, color, column-rule-color, outline-color, text-decoration-color</code>...</p>
+                
+                <p>
+                    <em>HTML5 actually provides a useful form element that allows us to test the colour capabilities of CSS live.</em> <input id="background-color" type="color" name="color" value="#50e60b" onchange="changeColor()" />
+                </p>
+
+            </div>
+            
+            <div class="content-box">
+            
+                <h3>Know your limits!</h3>
+                
+                <p>
+                    Now that we can make things look graphically gorgeous, how do we go about sizing them? Well, CSS defines two surprisingly extensive categories of sizing units: <strong>relative</strong> and <strong>absolute</strong>. When setting any size, the length you apply will be a number followed by a unit’s <a class="peekable">abbreviation</a><span>without any spaces</span><span></span>- if you’re setting it to zero you may omit the unit for brevity.
+                </p>
+                
+                <div class="dark">
+                
+                    <p>
+                        When dealing with units, it’s important to not go overboard. As Marcos Ojeda, a designer at 'Khan Academy' documents: “<em>Funny story: around 2010, I was working on a band's website and made the assumption [that units were infinite], so I left-positioned a div at -10,000,000px. About a week after launch, I got an email forwarded to me from an 'Opera' dev and fan of the group who was writing to let me know that ten million was too much left for the element and that their internal CSS parser just threw up its hands at very big values like that, breaking my layout.</em>”
+                    </p>
+                    
+                    <p>
+                        Tricky stuff, huh? He states that his trick worked at '-100,000px', and that the experience made him "<em>forever skeptical of any css parser dealing with large numbers</em>".
+                    </p>
+                
+                </div>
+                
+                <p>
+                    <a class="peekable"><strong>Absolute</strong></a><span>which aren’t recommended for use on-screen thanks to variation in size</span><span></span> length units come as cm, mm, in, <a class="peekable">px</a><span>pixels, which are relative to the viewing device, meaning they may actually span more than one physical ‘pixel’</span><span></span>, pt, and pc.
+                </p>
+                
+                <p>
+                    <a class="peekable"><strong>Relative</strong></a><span>which are great for scaling as they are specified relative to another length property</span><span></span> length units come as <a class="peekable">em</a><span>relative to the font-size of the element</span><span></span>, <a class="peekable">rem</a><span>relative to the font-size of the root element</span><span></span>, <a class="peekable">vw/vh</a><span>relative to 1% of the viewport</span><span></span>, and the standard %. Em units multiple upon themselves when applied to font-size, so if an element with font size <em>1.2em</em> was nested within an element with the same rule, the inner-element would have larger text- therefore, relative units aren’t impervious to <strong>quirks</strong> and quandaries.<br />Fix: <em>use a good mix of both where appropriate</em>.
+                </p>
+                
+            </div>
+            
+            <div class="content-box demo-box">
+            
+                <h3>Pseudo Elements:</h3>
+                
+                <p>
+                    Shh! They'll hear you!
+                </p>
+                
+                <p>
+                    Pseudo-elements are a rather large topic, and context specific. Instead of filling your faucets with an overflow of information, I’ll direct you to <a href="http://www.w3schools.com/CSS/CSS_pseudo_elements.asp" target="_blank">this comprehensive resource</a>, and provide a brief explanation: pseudo elements select special parts of some elements. They match based on an English representation of a semantic part of the DOM- for example, <code class="inline-code css">:first-letter</code> will select the first element of a paragraph, and <code class="inline-code css">:nth-child(x)</code> will select a specific child <a class="peekable">node</a><span>the argument can also be ‘even’ or ‘odd'</span><span></span>. 
+                </p>
+            
+            </div>
+            
+            <div class="content-box-anecdote">
+                
+                <h3>Tips!</h3>
+            
+                <p>
+                    While we’re dabbling with specifics, it’s worth mentioning that there is a world-wide community behind CSS, pushing its development and, well, generally constantly <a class="peekable">complaining</a><span>in a friendly way, though!</span><span></span>. CSS seems to have a sort of love-it-or-hate-it effect on many people; a polarising topic, as its seeming simplicity is often an entrapment for many a wasted hour fixing breakages (you can still <a href="http://www.jigsaw.w3.org/css-validator/" target="_blank">validate your CSS</a>).
+                </p>
+                
+                <p>
+                    Consequently, <a href="http://css-tricks.com/snippets/css/css-triangle/" target="_blank">whole websites have been birthed</a> in the effort to provide ‘hacks’ and ‘tips’ for CSS that make certain tasks easier- the majority of them are ingenious.               
+                </p>
+                
+                <div class="arrow-right right"></div>
+                
+                <p>
+                    <a class="peekable">Alex Tebbs</a><span>a seattle-based ui developer</span><span></span> is one of many that hail the ‘CSS triangle’ as the “<em>king of CSS hacks</em>”, as we will explore.
+                </p>
+                
+                <p>
+                    I actually used this method in tandem with an <code class="inline-code css">::after</code> <strong>pseudoclass</strong> to provide the triangles stemming from the <a class="peekable">tooltips</a><span>cute, huh?</span><span></span> on this website. What you do: create a div that has no height or width- ergo, it is a literal point. Then, add a border on three sides, which fill the spaces and produces a cheaty-arrow! There’s tonnes of techniques such as this, that although not necessarily recommended 100% of the time, can help you grow your understanding and overcome annoying obstacles.
+                </p>
+            
+            </div>
+            
+            <div id="demo-box" class="content-box-code">
+            
+                <div id="dynamic-div">
+                
+                    <p>Take me for a spin!</p>
+                
+                </div>
+                
+                <hr/ >
+                
+                <div class="controls">
+                    <input id="padding" type="range" min="0" max="50" step="1" value="10" onchange="updatePadding()" />     
+                    <p>Padding</p>                    
+                </div>
+                
+                <div class="controls">
+                    <input id="border" type="range" min="0" max="40" step="1" value="5" onchange="updateBorder()" />     
+                    <p>Border</p>                    
+                </div>
+                
+                <div class="controls">
+                    <input id="position" type="range" min="0" max="95" step="5" value="50" onchange="updatePosition()" />     
+                    <p>Horizontal Position</p>                    
+                </div>
+                
+            </div>
+        
+            <!-- Section navigation. -->
+            <a href="css-1.html" class="nav-button left">Back</a>
+            <a href="css-3.html" class="nav-button right">Next</a>
+
+            <!-- Footer consistent per-page. -->
+            <div id="footer">
+
+                <ul id="footer-links">
+
+                    <li><a href="snippet-glossary.html">Code Glossary</a></li>
+                    <li><a href="javascript:toggleSound()">Sound On/Off</a></li>
+                    <li><a href="javascript:viewSource()">View Page Source</a></li>
+                    <li><a href="javascript:viewTerms()">Terms</a></li>
+                    <li>© <a target="_blank" href="http://github.com/JoshHills">Josh 'Averington' Hills</a>, <a target="_blank" href="http://www.symbiopticstudios.co.uk/">Symbiopticstudios</a>, 2015 <a target="_blank" href="http://www.ncl.ac.uk/undergraduate/modules/module/CSC1026/">for Newcastle University</a></li>
+
+                </ul>
+
+            </div>
+            
+        </div>
+
+    </body>
+    
+</html>

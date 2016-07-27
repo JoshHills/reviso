@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <head>
+        
+        <title>Web Architecture Basics</title>
+        
+        <meta charset="UTF-8" />
+        <meta name="author" content="Josh Hills" />
+        
+        <!-- Import main stylesheet, page-specific stylesheet (if necessary) and a responsive stylesheet. -->
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/main-responsive.css" />
+        <link rel="stylesheet" href="css/extra-resources.css" />
+        
+            <!-- Load plugins & scripts. -->
+        
+        <!-- jQuery -->
+        <script src="plugins/jquery-1.11.2.min.js"></script> 
+        
+        <!-- Highlight.js -->
+        <script src="plugins/highlight.pack.min.js"></script>
+        <link rel="stylesheet" href="plugins/default.min.css" />
+        
+        <!-- Load external operation scripts. -->
+        <script src="scripts/local-information.js"></script>
+        <script src="scripts/tooltip.js"></script>
+        <script src="scripts/question-classes.js"></script>
+        <script src="scripts/questions/architecture-1.js"></script>
+        <script src="scripts/user-operations.js"></script>
+        <script src="scripts/progress-bar.js"></script>
+        <script src="scripts/page-operations.js"></script>
+        
+        <!-- Link site's favicon to aid browser display. -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        
+    </head>
+
+    <body id="architecture-1">
+
+        <!-- Navigation bar. -->
+        <div id="nav-container">
+            
+            <div id="nav-bar">
+
+                <a href="index.html"><img id="logo" src="images/logo.png" alt="Reviso logo" /></a>
+
+                <ul id="site-map">
+                    <li ><a href="index.html">Topics</a></li>
+                    <li ><a href="about.html">About</a></li>
+                </ul>
+                
+                <div id="progress-bar"></div>
+
+            </div>
+            
+        </div>
+        
+        <!-- Alert bar. -->
+        <div id="alert-container">
+            <div id="alert-bar">
+                <p id="alert-text"></p><button onclick="hideAlert()">x</button>
+            </div>
+        </div>
+        
+        <!-- Main content block. -->
+        <div class="container">
+            
+            <div class="content-box">
+
+                <div class="header">
+                    <img src="images/topic-headers/architecture-1.jpg" class="header-image" alt="'About' header image." />
+                    <h2 >Web Architecture: Basics</h2>
+                </div>
+                
+                <div class="dark">
+                    <p>
+                        It’s almost ironic, the extent that as humans we use tools without an understanding of how they actually work. As waves of children are born into a world abundant with incredible technological support and opportunity, it can be daunting the amount of knowledgeable catching up we have to do in order to get actively involved ourselves!<br /><br />
+                        
+                        It’s no surprise then, that when asked the questions “<em>what is the ‘internet’</em>?”, and “<em>how does it work?</em>”, that the average person may be left somewhat perplexed at their inability to fathom a correct answer. So, starting at square one with a blank canvas, let’s delve into just how our omnipresent, virtually interconnected world maintains such a status, as we explore the architecture of the web…
+                    </p>
+                </div>
+                
+                <div class="key-points right">
+                
+                    <table class="points">
+                    
+                            <tr><td>The internet is a big, confusing mess, orchestrated by geniuses and businesses alike.</td></tr>
+                            <tr><td>This mess is dictated by standards that provide a backbone to the higher level interaction you likely want to achieve.</td></tr>
+                            <tr><td>A general understanding of these key-terms and the functions of these protocols is necessary in building your knowledge of any web-related subject.</td></tr>   
+                        
+                    </table>
+                
+                </div>
+
+                <p>
+                    Defined as “<em>a global computer network providing a variety of information and communication facilities</em>”, the concept of an ‘internet’ of people rather surprisingly harkens from the days of carrier pigeons and couriers. Nowadays, it comprises of a vast network of cables underpinning the infrastructure and oceans of planet Earth- nifty, huh?
+                </p>
+                
+                <img src="images/sections/architecture/undersea-cables.jpg" class="left" title="The Internet’s undersea backbone is built to last for 25 years!" alt="Undersea Internet Cables" />
+                
+                <p>
+                    The web has grown infinitesimally large since its conception. It acts as a tool that has minutely changed the way we live, and is now therefore literally shaping our cultures. Abstractly, it is simply an incredibly convenient space to exchange information, but utility-wise, it has the power to birth, as <a class="peekable">Berners-Lee</a><span><img src="images/sections/architecture/berners-lee.jpg" alt="Tim Berners-Lee's Portrait" />the man himself, dubbed 'father' of the internet.</span><span></span> aptly described, ‘semantic… intelligent agents’; it’s a virtual organism!
+                </p>
+                
+                <p>
+                    So you’d assume then, for such an established, complex, and <a class="peekable">large system</a><span>Check out this <a href="http://internet-map.net/" target="_blank">awesome interactive map</a> of the internet!</span><span></span> to exist, there must be standards in place that dictate how everything works?..
+                </p>
+                
+                <hr />
+                
+                <p>
+                    You'd be right! Boy, are you in for a treat. The encapsulated content in the boxes below should one-by-one fill you in on key concept and stages of the pipeline that is interacting with the internet.
+                </p>
+
+            </div>
+            
+            <div class="content-box demo-box">
+            
+                <p>Timeline of key events in developmental history:</p>
+                <ul>
+                    <li>
+                        1990 - Tim Berners-Lee, a British Computer Scientist working at CERN invent the World Wide Web, early protocols and minimal servers in place.
+                    </li>
+                    <li>
+                        1994 - W3C (World Wide Web Consortium) founded to oversee new web-developments and set standards.</li>
+                    <li>
+                        1996 - CSS is introduced, internet falls inevitably further into cesspool of animated dancing cats.</li>
+                    <li>
+                        2000 - XHTML is introduced, HTML4 is released.
+                    </li>
+                    <li>
+                        2009 - HTML 5 and CSS3 released (they are still being actively developed and experimented upon), a greater meshing of multi-modal media online.
+                    </li>
+                </ul>
+            
+            </div>
+            
+            <div class="content-box">
+            
+                <h3>Protocols:</h3>
+                
+                <div class="question right" id="architecture-1-1"></div>
+                
+                <p>
+                    As the physical internet provides an infrastructure that allows hardware devices to physically connect to one another, protocols determine how the <a class="peekable">communication</a><span>the different rulesets that govern these types of transferrals have specific benefits - security, speed..</span><span></span> between them is organised and allowed to occur. There are several different protocols that assist specific ways in which data is hurled from your hard-drive into the void, however the one you’ll have definitely heard of is ‘<a class="peekable">HTTP</a><span>hypertext transfer protocol</span><span></span>’, which is core for web-transactions.
+                </p>
+                
+                <p>
+                    Most of these services function on a client/server model, whereby local <a class="peekable">clients</a><span>software such as web-browsers</span><span></span> access centralised remote <a class="peekable">servers</a><span>hosts of the content</span><span></span>. Others may use ‘peer-to-peer’, which allows <a class="peekable">direct</a><span>for things like 'voice-over-ip', where self-hosting is preferable and easier to manage</span><span></span> access to another device.
+                </p>
+                
+                <hr>
+                
+                <p>
+                    When stacked together, these protocols build services, but what does the <strong>mortar</strong> look like between the bricks? Well, there’s a uniquely defined system in place that pivots off the deconstruction and comprehension of data 'packets'...
+                </p>
+            
+            </div>
+            
+            <div class="content-box">
+                
+                <img src="images/sections/architecture/heart.png" alt="Heart." class="right" />
+                <h3>Packets:</h3>
+                
+                <p>
+                    The <a class="peekable">TCP</a><span>transmission control protocol</span><span></span> is the heart of the internet’s communication- it breaks outgoing messages into packets, and stitches together incoming ones.
+                </p>
+                
+                <p>
+                    Reminiscent of <em>computer</em> architecture, these packets of information have specific discernible features that describe how to handle them, along with their actual data- this includes a <strong>head</strong> and a <strong>body</strong>.
+                </p>
+                
+                <p>
+                    So, understanding the delivery, let’s inspect the deliver<strong>er</strong>. The <a class="peekable">IP</a><span>internet protocol</span><span></span> handles the delivery of these packets to devices with a numeric <a class="peekable">address</a><span><a href="http://en.wikipedia.org/wiki/IP_address"><img  src="images/sections/architecture/address.png" alt="What an IP address looks like: (xxx.xxx.xxx.xxx)" /></a></span><span></span>, in a process called routing(this is connectionless, meaning that the data can travel via multiple routes to reach its destination- it’s pushed there). To reduce errors such as packet-loss (as they’re delivered out of sequence) or corruption, they are protected under a system of ‘best effort delivery’, in which on-arrival TCP checks the received information, and can re-request certain bits.
+                </p>
+            
+            </div>
+            
+            <div class="content-box demo-box between">
+
+                <p>
+                    I’ve been analogising the physical postal service throughout by my choice of words, however it’s apparent that a lot of virtual systems draw heavily from real-world models- this is particularly apparent in areas that once explained, already feel very familier- their logicality, behind all of the big scary words, makes a lot of sense!
+                </p>      
+            
+            </div>
+            
+            <div class="content-box">
+                
+                <div class="question left" id="architecture-1-2"></div>
+                
+                <div class="question left" id="architecture-1-3"></div>
+                
+                                <img src="images/sections/architecture/delivery.png" alt="A joke about a delivery notice." class="left" />
+            
+            </div>
+            
+            <div class="content-box">
+                
+                <img src="images/sections/architecture/phone.png" class="right" />
+                                
+                <h3>Domain names:</h3>
+                
+                <p>
+                    To elaborate on the subject of IP, and with its technicalities aside, it’s now time to apply a veneer of usefulness for the average user- most of the aforementioned actions happen invisibly. Domain names are a beautifully simple solution to a concerning problem- how do I find a website? Put simply, a domain refers to an IP address, and a domain name is a linked, human-readable identifier. Globally managed ‘Domain Name Servers’ serve as vast, virtual directories that propagate registered names across their systems. This allows us to personalise our locations. The relaxedness of domain-name-registration, which follows an <a class="peekable">LDH</a><span>letters, digits, hyphens</span><span></span> rule, has actually accidentally <a href="https://en.wikipedia.org/wiki/Phishing#Link_manipulation">helped malicious efforts such as 'phishing'</a>, which sometimes involves spoofing a another website's name to bait users into their own.
+                </p>
+                
+                <div class="dark">
+                    <p>
+                        <em>
+                            When you type a website in your address-bar, you’re simply asking a DNS to look up the address linked to the name, so you can establish a TCP connection with that website. 
+                        </em>                
+                    </p>
+                </div>
+
+                <p><strong>Syntax:</strong></p>
+            
+            <p>
+                The syntax for domain names is rather interesting- the heirarchy spans right-to-left, and consists of <strong>labels</strong>- each label specifies a sub-division, may contain up to 63 <a class="peekable">characters</a><span>in total not exceeding 253</span><span></span>, and starts (reading, ends) with a <a class="peekable">top-level</a><span>these are either country-oriented, like 'com', 'uk'... or generic- a base which has expanded vastly thanks to investments to incorporate 'ninja', 'xxx' and even 'bacon'</span><span></span> domain. As a point of interest, crafty people have taken to concatenating these labels into neologisms that describe their website, in a process called 'domain hacking', such as '<code>http://www.examp.le/</code>'.
+            </p>
+                
+            </div>
+        
+            <div class="content-box-anecdote">
+                
+                <h3>Why is it '127.0.0.1'?</h3>
+                
+                <img src="images/sections/architecture/magnifying.png" alt="Magnifying glass." class="left" />
+                
+                <p>
+                    <strong>You may already know of '127.0.0.1'; the loopback IP address also referred to as 'localhost'. It's used to establish a connection to your own computer, to let you host your own server that you can connect to yourself for purposes ranging from debugging to playing video games. But why that specific address?..</strong>
+                </p>
+                
+                <p>
+                    Fortunately, somebody did some sleuthing over on the 'Stack' forums, which detailed:<br /><br />
+                    
+                    <em>"The address zero is to be interpreted as meaning “this”, as in “this network”- for example, the address 0.0.0.37 could be interpreted as meaning host 37 on this network. The class A network number 127 is assigned the “loopback” function, that is, a datagram sent by a higher level protocol to a network 127 address should loop back inside the host. No datagram “sent” to a network 127 address should ever appear on any network anywhere.<br /><br />
+
+                    Even as early as September 1981 RFC 790, 0 and 127 were already reserved for this purpose."</em>
+                </p>
+                
+                <p>Another user posits:</p>
+                
+                <p>
+                    <em>"The values 0, 127 and 255 are special in 8 bit assembly and machine language programming because there are "tricks" you can use to test for these values and branch to different code using smaller instructions that execute faster than for other integers. 127 is the highest signed 8 bit integer, so incrementing it by 1 will cause a signed overflow."</em>
+                </p>
+                
+                <p>
+                    This doesn't entirely put the mystery to rest, but it's clear that it was set aside for a reason, and now you know what it does!
+                </p>
+                
+            </div>
+            
+            <div class="content-box">
+            
+                <h3>Clients &amp; Servers:</h3>
+                
+                <img src="images/sections/architecture/server-room.png" alt="A Server Room." class="right" />
+                
+                <p>
+                    <strong>Clients</strong> are essentially just pieces of software that send and recieve HTTP requests- they're generally composed of the same guts, but each may provide unique context-specific features. Web browsers are the most obvious example, however the scope of a client can extend to anything that accesses the internet and interpolates with a server.
+                </p>
+                
+                <hr />
+                
+                <p>
+                    <strong>Servers</strong> are pieces of software that listen to network ports for incoming requests, and respond accordingly. Multiple servers can be ran on one machine simultaneously, and they sometimes provide extraneous service as a stack, such as <a class="peekable">LAMP</a><span>named as an acronym of the names of its original four components: the linux operating system, the apache http server, the mysql relational database management system, and the php programming language</span><span></span> to provide a <a class="peekable">cloud-like</a><span><img src="images/sections/architecture/amazonaws.png" alt="Amazon Web Services Logo" /><br />This is a huge business!</span><span></span> virtual machine to do with what you will.
+                </p>
+                
+                <p>
+                    Typically, servers locate resources for you, control access to said resources, and manage traffic- some can get very busy.
+                </p>
+                
+                <div class="question" id="architecture-1-4"></div>
+                
+                <div class="question" id="architecture-1-5"></div>
+            
+            </div>
+        
+            <!-- Section navigation. -->
+            <a href="index.html" class="nav-button left">Back Home</a>
+            <a href="architecture-2.html" class="nav-button right">Next</a>
+
+            <!-- Footer consistent per-page. -->
+            <div id="footer">
+
+                <ul id="footer-links">
+
+                    <li><a href="snippet-glossary.html">Code Glossary</a></li>
+                    <li><a href="javascript:toggleSound()">Sound On/Off</a></li>
+                    <li><a href="javascript:viewSource()">View Page Source</a></li>
+                    <li><a href="javascript:viewTerms()">Terms</a></li>
+                    <li>© <a target="_blank" href="http://github.com/JoshHills">Josh 'Averington' Hills</a>, <a target="_blank" href="http://www.symbiopticstudios.co.uk/">Symbiopticstudios</a>, 2015 <a target="_blank" href="http://www.ncl.ac.uk/undergraduate/modules/module/CSC1026/">for Newcastle University</a></li>
+
+                </ul>
+
+            </div>
+            
+        </div>
+
+    </body>
+    
+</html>

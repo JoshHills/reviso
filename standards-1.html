@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <head>
+        
+        <title>Standards Overview</title>
+        
+        <meta charset="UTF-8" />
+        <meta name="author" content="Josh Hills" />
+        
+        <!-- Import main stylesheet, page-specific stylesheet (if necessary) and a responsive stylesheet. -->
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/main-responsive.css" />
+        
+            <!-- Load plugins & scripts. -->
+        
+        <!-- jQuery -->
+        <script src="plugins/jquery-1.11.2.min.js"></script> 
+        
+        <!-- Highlight.js -->
+        <script src="plugins/highlight.pack.min.js"></script>
+        <link rel="stylesheet" href="plugins/default.min.css" />
+        
+        <!-- Load external operation scripts. -->
+        <script src="scripts/local-information.js"></script>
+        <script src="scripts/tooltip.js"></script>
+        <script src="scripts/question-classes.js"></script>
+        <script src="scripts/questions/standards-1.js"></script>
+        <script src="scripts/user-operations.js"></script>
+        <script src="scripts/progress-bar.js"></script>
+        <script src="scripts/page-operations.js"></script>
+        
+        <!-- Link site's favicon to aid browser display. -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        
+    </head>
+
+    <body id="standards-1">
+
+        <!-- Navigation bar. -->
+        <div id="nav-container">
+            
+            <div id="nav-bar">
+
+                <a href="index.html"><img id="logo" src="images/logo.png" alt="Reviso logo" /></a>
+
+                <ul id="site-map">
+                    <li ><a href="index.html">Topics</a></li>
+                    <li ><a href="about.html">About</a></li>
+                </ul>
+                
+                <div id="progress-bar"></div>
+
+            </div>
+            
+        </div>
+        
+        <!-- Alert bar. -->
+        <div id="alert-container">
+            <div id="alert-bar">
+                <p id="alert-text"></p><button onclick="hideAlert()">x</button>
+            </div>
+        </div>
+        
+        <!-- Main content block. -->
+        <div class="container">
+            
+            <div class="content-box">
+
+                <div class="header">
+                    <img src="images/topic-headers/standards-1.png" class="header-image" alt="'About' header image." />
+                    <h2 >Standards: An Overview</h2>
+                </div>
+                
+                <div class="dark">
+                    <p>
+                        This is a brief topic, but it’s still <strong>incredibly</strong> important; in the same way that you might undergo safety training for a real-world job to ensure you perform it efficiently without error, there are standards you should adhere to in web-development that will ensure future compatibility and application of your services. I’m going to provide you with a run-down so you know the qualitative benchmark for your work, and point you to several links that you may treat as ‘terms and conditions’ <a class="peekable">documents</a><span>you mightn’t really read them, but at least they’re there for when you need them</span><span></span>.
+                    </p>
+                </div>
+                
+                <div class="key-points right">
+                
+                    <table class="points">
+                    
+                            <tr><td>Standards enforce good practice globally, and are maintained by bodies of people.</td></tr>
+                            <tr><td>They ensure that machines understand how to communicate, as a lot of the internet's traffic is non-human.</td></tr>
+                        
+                    </table>
+                
+                </div>
+                
+                <h3>Necessity:</h3>
+                
+                <p>
+                    <em>Accompanying this period of tremendous growth, has been an awareness that the web needs some sort of guidance in order to keep the web open and accessible. Compliance with standards sets a generality that enables things such as design for disabled users, and portability.</em>
+                </p>
+                
+                <p>
+                    Practically, you as a web-developer benefit from being concerned with these standards because they allows other to access your content in a pre-defined way; this leads to better indexing by search-engines, and allows new releases to be mindful of past versions of your content. They’re so important, that the '<a class="peekable">WaSP</a><span>web standards project</span><span></span>' have compiled comprehensive information about them in order to try and enforce the view that web-standards should continue to be <em>de facto</em>. The advantages will be explored in-depth here.
+                </p>
+
+            </div>
+            
+            <div class="content-box">
+            
+                <h3>Housekeeping:</h3>
+                
+                <img src="images/sections/standards/errors.png" alt="Errors!" class="right" />
+                
+                <p>
+                    In general, whomever authors a language is also responsible for its upkeep- the <strong>W3C</strong> maintains the interoperability of web-related products such as <strong>HTML</strong> and <strong>CSS</strong>. <strong>ECMAScript</strong>, the more formal ‘Javascript’, <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm)" target="_blank">is maintained</a> by ‘<a class="peekable">Ecma International</a><span>an association founded 1961 in order to meet the need for standardising computer operational formats</span><span></span>’- this script allows you to modify the document-object-model  (ergo, all of your HTML elements) in real-time without having to reload the page. Furthermore, the <a class="peekable">IETF</a><span>‘internet engineering task force’… bad. ass.</span> keep TCP/IP going.
+                </p>
+                
+                <p>
+                    “<em>So what?</em>”, you may flippantly grunt, scoffing at the notion of constantly having to update your methodology. Well, the consequences of letting your house of codes fall into disarray are numerous, and worrisome. As the WaSP states:
+                </p>
+                
+                <div class="dark">
+                
+                    <p>
+                        “<em>You will restrict access to your site. How much business sense does it make to limit your audience to only a fraction of those who wish be a part of it? Denying access to even small portions of a target audience can make a big difference… For an educational site, it makes sense to allow access not only to affluent, able-bodied school-children with graphical browsers, but also to children in regions with poorly-developed infrastructure who are best served by text-only browsing, or disabled students using specialized browsers.</em>”
+                    </p>
+                
+                </div>
+                
+                <p>
+                    Lesson-learned- be considerate, dude. Standards also bolster stability- design-wise, a website may suffer several iterations before reaching its destination- this means that teams of developers that you may find yourself a part of may receive <a class="peekable">poorly</a><span>reap what you sow, etc.</span><span></span> maintained code.
+                </p>
+            
+            </div>
+            
+            <div class="content-box demo-box">
+
+                <h3>Okay, you’ve made your point!</h3>
+                
+                <p>
+                    Good. Now, ensuring you follow these standards doesn’t necessarily entail you reading hundreds of monotonous specification documents- <a class="peekable">DTDs</a><span>both strict (only containing current tags) and ‘transitional’(retaining deprecated ones)</span><span></span>, as covered, are also provided in a <a href="http://www.w3.org/TR/html4/loose.dtd" target="_blank">machine-readable format</a> which means that there are several handy pistops on the web that allow you to automatically check your code. These validation tools parse your sources and compare them against these DTDs, hopefully alerting you of malpractice.
+                </p>
+                
+                <p>
+                    Importantly, HTML5 validation <a href="http://www.impressivewebs.com/understanding-html5-validation/" target="_blank">can be troublesome</a>; the engines currently being used are <em>experimental</em>, and resultingly potentially inaccurate- as Louis Lazaris of 'ImpressiveWebs' <a href="http://www.impressivewebs.com/understanding-html5-validation/" target="_blank">put it</a>, "<em>we shouldn’t refer to it as a 'validator' anymore; it’s now more accurately referred to as a 'conformance checker'</em>". This is because, with an influx of new tags and user-customisation of the language, checking cannot be done against a DTD, but instead must use pattern-matching to test if elements are formatted <a class="peekable">correctly</a><span>this means that even if your code doesn't incur any errors, it mightn't be perfect</span><span></span>.
+                </p>
+            
+            </div>
+            
+            <div class="content-box-code">
+            
+                <h3>Getting our hands dirty...</h3>
+                
+                <p>
+                     Sometimes, when delving the deeps of a website you may find <a class="peekable">errors</a><span><img src="images/sections/standards/sneaky.png" alt="Erros in someone else's code." title="Even the pro's get caught up in messy code!" /></span><span></span> in standards compliance yourself- there are a great many humorous and/or terrible things to find in source-code(similar to the odd things you can find on google maps). The code snippet below is teeming with errors, and showcases how not to go about things- it flaunts many of the principles we’ve so far covered- see if you can spot them all.
+                </p>
+                
+                <pre><code id="standards-1-1-exampledoc" class="load inline-code"></code></pre>
+            
+            </div>
+            
+            <div class="content-box">
+                
+                <div id="standards-1-1" class="question"></div>
+                
+            </div>
+        
+            <!-- Section navigation. -->
+            <a href="index.html" class="nav-button left">Back Home</a>
+            <a href="css-1.html" class="nav-button right">Next Topic</a>
+
+            <!-- Footer consistent per-page. -->
+            <div id="footer">
+
+                <ul id="footer-links">
+
+                    <li><a href="snippet-glossary.html">Code Glossary</a></li>
+                    <li><a href="javascript:toggleSound()">Sound On/Off</a></li>
+                    <li><a href="javascript:viewSource()">View Page Source</a></li>
+                    <li><a href="javascript:viewTerms()">Terms</a></li>
+                    <li>© <a target="_blank" href="http://github.com/JoshHills">Josh 'Averington' Hills</a>, <a target="_blank" href="http://www.symbiopticstudios.co.uk/">Symbiopticstudios</a>, 2015 <a target="_blank" href="http://www.ncl.ac.uk/undergraduate/modules/module/CSC1026/">for Newcastle University</a></li>
+
+                </ul>
+
+            </div>
+            
+        </div>
+
+    </body>
+    
+</html>

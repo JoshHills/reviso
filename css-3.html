@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <head>
+        
+        <title>CSS Layouts</title>
+        
+        <meta charset="UTF-8" />
+        <meta name="author" content="Josh Hills" />
+        
+        <!-- Import main stylesheet, page-specific stylesheet (if necessary) and a responsive stylesheet. -->
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/main-responsive.css" />
+        <link rel="stylesheet" href="css/sections/css/css-2.css" />
+        
+            <!-- Load plugins & scripts. -->
+        
+        <!-- jQuery -->
+        <script src="plugins/jquery-1.11.2.min.js"></script> 
+        
+        <!-- Highlight.js -->
+        <script src="plugins/highlight.pack.min.js"></script>
+        <link rel="stylesheet" href="plugins/default.min.css" />
+        
+        <!-- Load external operation scripts. -->
+        <script src="scripts/local-information.js"></script>
+        <script src="scripts/tooltip.js"></script>
+        <script src="scripts/question-classes.js"></script>
+        <script src="scripts/user-operations.js"></script>
+        <script src="scripts/progress-bar.js"></script>
+        <script src="scripts/page-operations.js"></script>
+        <script src="scripts/sections/css-2.js"></script>
+        
+        <!-- Link site's favicon to aid browser display. -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        
+    </head>
+
+    <body id="css-3">
+
+        <!-- Navigation bar. -->
+        <div id="nav-container">
+            
+            <div id="nav-bar">
+
+                <a href="index.html"><img id="logo" src="images/logo.png" alt="Reviso logo" /></a>
+
+                <ul id="site-map">
+                    <li ><a href="index.html">Topics</a></li>
+                    <li ><a href="about.html">About</a></li>
+                </ul>
+                
+                <div id="progress-bar"></div>
+
+            </div>
+            
+        </div>
+        
+        <!-- Alert bar. -->
+        <div id="alert-container">
+            <div id="alert-bar">
+                <p id="alert-text"></p><button onclick="hideAlert()">x</button>
+            </div>
+        </div>
+        
+        <!-- Main content block. -->
+        <div class="container">
+            
+            <div class="content-box">
+
+                <div class="header">
+                    <img src="images/topic-headers/css-3.png" class="header-image" alt="'About' header image." />
+                    <h2 >CSS: Layouts</h2>
+                </div>
+                
+                <div class="dark">
+                    <p>
+                        On this page we will explore how elements are laid out in the page-flow, and how to make them work together without clashing. Fundamental to CSS is the idea that every element is essentially <strong>box-like</strong>, and when you apply transformations of spacing and positioning, you apply them to one or more inner/outer faces of the box. When using your browser’s developer tools, they may provide a greater insight as to what is creating this invisible space- let’s uncover the mystery theoretically…
+                    </p>
+                </div>
+                
+                <h3>Positioning:</h3>
+                
+                <div class="key-points right">
+                
+                    <table class="points">
+                    
+                            <tr><td>It's useful to understand the abstraction of layout when it comes to styling your documents.</td></tr>
+                            <tr><td>You can design for specific contexts- it makes you a better person.</td></tr>
+                        
+                    </table>
+                
+                </div>
+                
+                <p>
+                    Keeping the thread of thought that all your elements are <em>trapped</em> inside boxes, it’s actually somewhat trivial to re-arrange them. The natural page flow of a document is the <strong>source order</strong> display of the page’s elements- this tends to render one-after-another. By default, elements are positioned '<a class="peekable">relative</a><span>as in, stemming from the top-left co-ordinate</span><span></span>' to this origin point- by applying <strong>top</strong>, <strong>right</strong>, <strong>bottom</strong> or <strong>left</strong>, you can essentially push the box in a direction.
+                </p>
+                
+                <p>
+                    By making an element’s position ‘absolute’, you re-anchor it to the top-left of its <strong>container</strong>, and subsequent specifications of position push it from <a class="peekable">there</a><span>this takes it out of the page flow, hovering it above over content</span><span></span>. By making something <a class="peekable">fixed</a><span>such as the navigation bar for this website</span><span></span>, it’s locked to the viewport! Whew, a lot of information to take in, but this topic can be nightmarish without demonstration! There are a few other more context-specific layouts you may explore in your spare time to serve a specific purpose- I encourage you to also peruse the source code of ‘Reviso’ itself to see the diversity in position properties.
+                </p>
+                
+            </div>
+            
+            <div class="content-box">
+            
+                <h3>Floats:</h3>
+
+                <div class="key-points right">
+                
+                    <table class="points">
+                    
+                            <tr><td>It works!</td></tr>
+                        
+                    </table>
+                
+                </div>
+                
+                <p>
+                    No, not the ice-cream variety- floats allow website-content to dynamically reposition itself, at the cost of being incredibly complicated to maintain with a complex structure. Similar to absolutely positioned elements, but these elements essentially form an orderly queue cascading down the page that will move out of the way should the need arise. All of the inline pictures in this website are floated one way or the other to keep things interesting!
+                </p>
+                
+                <pre><code id="css-3-1-floats" class="load inline-code"></code></pre>
+                
+                <p>
+                    Note: <em>If you start using floats and notice that their obfuscating some of your content, you can add ‘<code class="inline-code css">clear: both</code>’ to said content to ensure it stays clear of them.</em>
+                </p>
+            
+            </div>
+            
+            <div class="content-box demo-box">
+            
+                <h3>'Clearfixing':</h3>
+                
+                <p>
+                    Now that you’re adopting a haphazard stack of new key-words, you may find it hard to apply to your projects when the browser itself also provides many default ‘<em>kit</em>’ styles that could tamper with your understanding. You may want to follow the path of many begrudging designers, who, with the need to be as perfect as possible, erase and reset all inherent styled in a document before doing anything else!
+                </p>
+                
+                <p>
+                    <strong>A chunk of CSS that selects every element possible is provided under the autonym of a ‘clearfix’, and may look like this:</strong>
+                </p>
+                
+                <pre><code id="css-3-2-clearfix" class="load inline-code"></code></pre>
+                
+                <p>
+                    It’s up to you whether you’d classify that as <a class="peekable">paranoid</a><span>it’s paranoid</span><span></span>.
+                </p>
+            
+            </div>
+            
+            <div class="content-box">
+            
+                <h3>Media Types &amp; Responsive Design:</h3>
+                
+                <div class="dark">
+                
+                    <p>
+                        In the interest of furthering your knowledge of the subject, it’s important that we don’t just get bogged down in syntax- of course, it’s necessary, but it can be stifling at times. On a healthy, positive note, let’s take a look at some design strategies we can follow that will encourage future-proofing, and a generally friendly user experience. A site layout example that adapts to browser viewport width was first demonstrated in 2004- by 2008, terms such as “<em>flexible</em>”, “<em>liquid</em>”, and “<em>fluid</em>” were weaseling their way into the common web-developers idiolect. What’s all the fuss about?
+                    </p>
+                
+                </div>
+                
+                <p>
+                    The concept of responsive design is not new. However, increasingly we are being equipped expertly with the tools to implement it, to the extent that not only will it eventually become absolutely vital to a website’s maintenance, but harder to <em>exclude</em> it. Recently, ‘Awwwards’ <a href="http://www.awwwards.com/websites/responsive-design/" target="_blank">identified some of the best responsive websites</a> currently being hosted, so you can get a real glimpse at spectacular implementation.
+                </p>
+                
+                <hr />
+                
+                <p>
+                    The idea is simple- your service should adapt to the user’s needs, based on contextual hardware factors such as device, screen size/resolution, and interactivity with your medium. The phrase ‘<strong>anywhere, everywhere</strong>’ springs to mind. The internet is global, so your content should be able to be viewed globally, and in different formats, while still achieving your initial vision.                 
+                </p>
+            
+                <p>
+                    <a class="peekable">Jody Resnick</a><span>ceo of trighton interactive, a full-service digital agency that focuses heavily on responsive web design</span><span></span> said: “<em>Responsive websites provide continuity between different viewing contexts, remaining completely agnostic to the type of device used and the size of the screen it has. What this means is that the same website will present an optimized layout regardless of which device it finds itself being loaded in.</em>” She then predicts: “<em>leveraging this technology in the future will allow companies to integrate a plethora of back-end services</em>”, which would be both very innovative and very <a class="peekable">lucrative</a><span>hey, money makes the world go ‘round</span><span></span>.
+                </p>
+                
+                <p>
+                    <strong> This is a learned skill that takes time to forge, however you can take the preliminary steps towards this kind of design by starting with it.</strong>
+                </p>
+                
+            </div>
+            
+            <div class="content-box-code">
+            
+                <p>
+                    Wikipedia, the hub of all holy knowledge, summarises an <a class="peekable">RWD</a><span>responsive web design</span><span></span> website as one that adapts the layout to the viewing environment by using fluid, proportion-based grids, flexible images, and CSS3 media queries such as extensions of the ‘<code class="inline-code css">@media</code>’ rule. Nervous? Don’t be, we’ll tip-toe into the shallow-end this time- the file below is the responsive CSS file linked to each page that formats it nicely even when you make the window a ridiculously small size!
+                </p>
+                
+                <h3>main-responsive.css</h3>
+                <pre><code id="css-3-3-media" class="load inline-code"></code></pre>
+            
+            </div>
+        
+            <!-- Section navigation. -->
+            <a href="css-2.html" class="nav-button left">Back</a>
+            <a href="javascript-1.html" class="nav-button right">Next Topic</a>
+
+            <!-- Footer consistent per-page. -->
+            <div id="footer">
+
+                <ul id="footer-links">
+
+                    <li><a href="snippet-glossary.html">Code Glossary</a></li>
+                    <li><a href="javascript:toggleSound()">Sound On/Off</a></li>
+                    <li><a href="javascript:viewSource()">View Page Source</a></li>
+                    <li><a href="javascript:viewTerms()">Terms</a></li>
+                    <li>© <a target="_blank" href="http://github.com/JoshHills">Josh 'Averington' Hills</a>, <a target="_blank" href="http://www.symbiopticstudios.co.uk/">Symbiopticstudios</a>, 2015 <a target="_blank" href="http://www.ncl.ac.uk/undergraduate/modules/module/CSC1026/">for Newcastle University</a></li>
+
+                </ul>
+
+            </div>
+            
+        </div>
+
+    </body>
+    
+</html>

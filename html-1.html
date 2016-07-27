@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <head>
+        
+        <title>HTML Basics</title>
+        
+        <meta charset="UTF-8" />
+        <meta name="author" content="Josh Hills" />
+        
+        <!-- Import main stylesheet, page-specific stylesheet (if necessary) and a responsive stylesheet. -->
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/main-responsive.css" />
+        
+            <!-- Load plugins & scripts. -->
+        
+        <!-- jQuery -->
+        <script src="plugins/jquery-1.11.2.min.js"></script> 
+        
+        <!-- Highlight.js -->
+        <script src="plugins/highlight.pack.min.js"></script>
+        <link rel="stylesheet" href="plugins/default.min.css" />
+        
+        <!-- Load external operation scripts. -->
+        <script src="scripts/local-information.js"></script>
+        <script src="scripts/tooltip.js"></script>
+        <script src="scripts/question-classes.js"></script>
+        <script src="scripts/questions/html-1.js"></script>
+        <script src="scripts/user-operations.js"></script>
+        <script src="scripts/progress-bar.js"></script>
+        <script src="scripts/page-operations.js"></script>
+        
+        <!-- Link site's favicon to aid browser display. -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        
+    </head>
+
+    <body id="html-1">
+
+        <!-- Navigation bar. -->
+        <div id="nav-container">
+            
+            <div id="nav-bar">
+
+                <a href="index.html"><img id="logo" src="images/logo.png" alt="Reviso logo" /></a>
+
+                <ul id="site-map">
+                    <li ><a href="index.html">Topics</a></li>
+                    <li ><a href="about.html">About</a></li>
+                </ul>
+                
+                <div id="progress-bar"></div>
+
+            </div>
+            
+        </div>
+        
+        <!-- Alert bar. -->
+        <div id="alert-container">
+            <div id="alert-bar">
+                <p id="alert-text"></p><button onclick="hideAlert()">x</button>
+            </div>
+        </div>
+        
+        <!-- Main content block. -->
+        <div class="container">
+            
+            <div class="content-box">
+
+                <div class="header">
+                    <img src="images/topic-headers/html-1.png" class="header-image" alt="'About' header image." />
+                    <h2 >HTML: Basics</h2>
+                </div>
+                
+                <div class="dark">
+                    <p>
+                        Websites are composed of building blocks that complement eachother to produce a final product. At a very basic level, they are written purely in HTML. This is a display-oriented language that does a good job of abstracting document-like elements and information, providing a really solid structure to your web-related endeavours should you approach the task with ample planning.
+                    </p>
+                </div>
+                
+                <div class="key-points right">
+                
+                    <table class="points">
+                    
+                            <tr><td>HTML lays the ground-work for web development.</td></tr>
+                            <tr><td>It has specific syntax that helps display information.</td></tr>
+                            <tr><td>There are tools that can help you interact with this.</td></tr>  
+                        
+                    </table>
+                
+                </div>
+                
+                <h3 id="blocks">'Building blocks', you say?..</h3>
+                
+                <p>
+                    Why yes, inquisitor! It's a good way to analogise them, at least. Defensive design ensures that steps are taken to provide backward compatibility of these elements, should any break- this keeps your service functioning at least slightly.
+                </p>
+
+                <p>
+                    The current model is a trifecta of languages that each provide an independent functionality that builts upon the service in its current state. It's important to think of a website as a bunch of seperate units working in tandem to display something to you; and, of course, like most things, those before us have forged some principles to follow in the interest of good practice.
+                </p>
+                
+                <hr />
+                
+                <img src="images/sections/html/blocks.png" alt="Building blocks." class="right" />
+                
+                <h3>Separation of concerns:</h3>
+                
+                <p>
+                    Seperation of content from its actual presentation allows you to fiddle with individual properties of your website. By keeping things in <a class="peekable">specific</a><span>this is similar to the concept of encapsulation in software programming</span><span></span> places, there is therefore a greater ease-of-maintenance, consistency and accessibility. HTML is purely for information so we'll start here at the ground floor...
+                </p>
+                
+            </div>
+            
+            <div id="nosferatu"></div>
+                 
+            <div class="content-box">
+
+                <h3>Document Structure:</h3>
+                
+                <img src="images/sections/html/scaffold.png" alt="Scaffold." class="left" />
+
+                <p>
+                    As a case study, let's say you want to make a website about a subject; you might write some sort of planning document to solidify the content before webify-ing it- that'd be pretty forward thinking of you. This constitutes one element of HTML- arguably the most important part!
+                </p>
+                
+                <p>
+                    Next up, is qualifying this content- by this, I simply mean wrapping it in an appropriate identifier. In HTML, these are syntactically defined as 'tags', and they look like <a class="peekable">this</a><span>they must be 'closed', which is done by writing the tag again but prepending the element name with a '/'</span><span></span>: <code class="inline-code">&lt;<em><strong>element-name</strong></em>&gt;</code>
+                </p>
+                
+                <p>
+                    So, you have to evaluate what descriptors most specifically suit your information- do you have a <em>paragraph</em> of text? Use <code class="inline-code">&lt;p&gt;</code>. Do you have a title for that paragraph? Use <code class="inline-code">&lt;h1&gt;</code>. Is there a list in there somewhere? Use <code class="inline-code">&lt;ul&gt;</code>.</p>
+                
+                <hr />
+                
+                <p>
+                    So, it's up to you to decide how you want to semantically wrap your information, at this first stage of the production line.
+                </p>
+                
+                <p>
+                    <strong>Importantly, these elements can also have</strong> '<a class="peekable">attributes</a><span>such as &lt;element attribute="myAttr"&gt;</span><span></span>' <strong>and</strong> '<a class="peekable">classes</a><span>such as &lt;element class="myClass"&gt;</span><span></span>' - <strong>we'll look into these in depth a little later.</strong>
+                </p>
+
+            </div>
+            
+            <div class="content-box demo-box">
+            
+                <p>
+                    Now that you're roughly aware of how to translate your content to the HTML format, it's a good idea to have a look at some examples of how others have structured their own. This requires some preliminary working skills in order to competently fiddle with the inner-workings of websites. Let's take a look at the magical subset of...
+                </p>
+                
+                <h3>Developer Tools:</h3>
+                
+                <img src="images/sections/html/elements.png" alt="Visual representation of elements." class="right" />
+                
+                <p>
+                    Your browser will have some sort of developmental tools to offer that allow you to view the source code of a web-page. While this <em>can</em> be achieved here by right-clicking the viewport and <a class="peekable">selecting</a><span><img src="images/sections/html/viewsource.png" alt="How to view source demonstration." /></span><span></span> the right option, <em>or</em> even clicking the 'View Page Source' option in the footer of this page, you'll recieve a much nicer graphical representation of the HTML tree by opening your browser's developer mode. This is usually bound to <strong>F12</strong>, however you may need to give it a quick google.
+                </p>
+                
+                <p>
+                    With this kind of display, you can select and modify elements,  access the console to input script commands, and essentially control every faucet of the page!
+                </p>
+            
+            </div>
+            
+            <div class="content-box">
+                
+                <h3>It's been quite a ride!</h3>
+            
+                <div id="html-1-1" class="question right"></div>
+                
+                <p>
+                    So now you know how HTML works, we can look at it contextually. It was originally designed to handle simple, text-based documents, but HTML <a class="peekable">4.01</a><span>released 1999</span><span></span>'s release heralded a new wave of creative application- it provided support for new building <a class="peekable">blocks</a><span>like 'css' - cascading style sheets which apply a lick of idiomatic paint to your content</span><span></span>!
+                </p>
+                
+                <p>
+                    HTML5, ostensibly <em>tardy</em> to the party, ushered another wave of creativity, relaxing certain strict boundaries set in place by the web-consortium and adding a plentiful bounty of relevant <a class="peekable">tags</a><span>such as &lt;progress&gt; and &lt;article&gt;</span><span></span>.
+                </p>
+                
+                <p>
+                    A problem of the lax nature of HTML is that consequently, you can make mistakes during coding that the client will usually amend for you- this uses more processing power, and leads to sloppy practice! This actually instigated the development of a branch of HTML, the brainchild of two languages...
+                </p>
+                
+                <div class="dark">
+                
+                    <h3>XHTML</h3>
+                    
+                    <p>
+                        XHTML excercises a more strict grasp of syntax resulting from its symbiosis with XML- although it still uses the same tags, there's a stricter ruleset in play:
+                    </p>
+                    
+                    <ul>
+                        <li>Tags and attributes must be in <strong>lower case</strong>, and have full name-value pairs.</li>
+                        <li>Every opened tag must be <strong>closed</strong>.</li>
+                        <li>Special characters must use things called <a class="peekable">'entity'</a><span>for example, '&lt;' is '&amp;lt;' - more information can be <a href="http://www.w3schools.com/html/html_entities.asp" target="_blank">found here</a></span><span></span> values, which ensure that characters reserved by the language can still be used, but wont interfere.</li>
+                    </ul>
+                    
+                    <p>
+                        The birth of this language was determined as a necessary <em>fixer</em> for what HTML didn't account for- as the W3 logs: "<em>...when XML was introduced, a two-day workshop was organised to discuss whether a new version of HTML in XML was needed. The opinion at the workshop was a clear 'Yes': with an XML-based HTML other XML languages could include bits of XHTML, and XHTML documents could include bits of other markup languages. We could also take advantage of the redesign to clean up some of the more untidy parts of HTML, and add some new needed functionality, like better forms.</em>".
+                    </p>
+                
+                </div>
+                
+                <p>
+                    You might be a little confused now as to which one you should use- the answer is: if you do it right, it doesn't matter! Understand the scope of your project and what it entails before starting, and follow the 'standards' guidance in the next topic; sometimes, you mightn't even get the choice. Many businesses exist on monolithic systems, and and restrictions might be placed upon you by a client or scenario. Run with it!
+                </p>
+            
+            </div>
+        
+            <!-- Section navigation. -->
+            <a href="index.html" class="nav-button left">Back Home</a>
+            <a href="html-2.html" class="nav-button right">Next</a>
+
+            <!-- Footer consistent per-page. -->
+            <div id="footer">
+
+                <ul id="footer-links">
+
+                    <li><a href="snippet-glossary.html">Code Glossary</a></li>
+                    <li><a href="javascript:toggleSound()">Sound On/Off</a></li>
+                    <li><a href="javascript:viewSource()">View Page Source</a></li>
+                    <li><a href="javascript:viewTerms()">Terms</a></li>
+                    <li>© <a target="_blank" href="http://github.com/JoshHills">Josh 'Averington' Hills</a>, <a target="_blank" href="http://www.symbiopticstudios.co.uk/">Symbiopticstudios</a>, 2015 <a target="_blank" href="http://www.ncl.ac.uk/undergraduate/modules/module/CSC1026/">for Newcastle University</a></li>
+
+                </ul>
+
+            </div>
+            
+        </div>
+
+    </body>
+    
+</html>

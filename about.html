@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <head>
+        
+        <title>About Reviso</title>
+        
+        <meta charset="UTF-8">
+        <meta name="author" content="Josh Hills">
+        
+        <!-- Import main stylesheet, page-specific stylesheet (if necessary) and a responsive stylesheet. -->
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/main-responsive.css" />
+        
+            <!-- Load plugins & scripts. -->
+        
+        <!-- jQuery -->
+        <script src="plugins/jquery-1.11.2.min.js"></script> 
+        
+        <!-- Highlight.js -->
+        <script src="plugins/highlight.pack.min.js"></script>
+        <link rel="stylesheet" href="plugins/default.min.css" />
+        
+        <!-- Load external operation scripts. -->
+        <script src="scripts/local-information.js"></script>
+        <script src="scripts/tooltip.js"></script>
+        <script src="scripts/question-classes.js"></script>
+        <script src="scripts/questions/about.js"></script>
+        <script src="scripts/user-operations.js"></script>
+        <script src="scripts/progress-bar.js"></script>
+        <script src="scripts/page-operations.js"></script>
+        
+        <!-- Link site's favicon to aid browser display. -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        
+    </head>
+
+    <body id="about">
+
+        <!-- Navigation bar. -->
+        <div id="nav-container">
+            
+            <div id="nav-bar">
+
+                <a href="index.html"><img id="logo" src="images/logo.png" alt="Reviso logo" /></a>
+
+                <ul id="site-map">
+                    <li><a href="index.html">Topics</a></li>
+                    <li class="active"><a href="about.html">About</a></li>
+                    <li><a href="#">Progress</a></li>
+                </ul>
+
+            </div>
+            
+        </div>
+        
+        <!-- Alert bar. -->
+        <div id="alert-container">
+            <div id="alert-bar">
+                <p id="alert-text"></p><button onclick="hideAlert()">x</button>
+            </div>
+        </div>
+        
+        <!-- Main content block. -->
+        <div class="container">
+            
+            <div class="content-box">
+            
+                <div class="header">
+                    <img src="images/topic-headers/about.jpg" class="header-image" alt="'About' header image." />
+                    <h2>Welcome to 'Reviso'!</h2>
+                </div>
+                
+                <div class="dark">
+                
+                    <p>
+                        The purpose of this website, devoid of any marketing patter, is simple: we want to help you learn the things you're going to need to learn! We offer a web-related technology course, which aims to take you on a magical journey through the syllabus, visiting the wondrous lands of both design and implementation. The aim is to inspire you to discover more about the subject while silmulatenously establishing a basic skillset to enable you to do so. We hope you enjoy your stay, and take advantage of your statistical progress checking via the tests available to bolster your revision effort. Don't fail!
+                    </p>
+                
+                </div>
+                
+                <h3>How to use me:</h3>
+                
+                <div class="key-points right">
+                
+                    <table class="points">
+                    
+                        <tr><td>Key points will be displayed on each section to help you out.</td></tr>
+                        <tr><td>This should give you a brief overview.</td></tr>
+                        <tr><td>They serve as learning objectives!</td></tr>
+                        
+                    </table>
+                
+                </div>
+                
+                <p>
+                    Choose a topic to start with (preferably one you're interested in, need to revise, and which relfects your current level of understanding). In the topic, a progress bar will track your completion of the questions of each page, which themselves reference the content. This should test your memory, and help with the whole <em>exam</em> thing you having going on. Capiche? Great. Try the question below, just to make sure you have that locked down.
+                </p>
+                
+                <p>
+                    The information provided in each section meanders from the basics to the downright obscure, just to expand your palate- you're not a web developer if you haven't grappled the horns of CSS transitions or sulked in defeat at a browser's inability to run your script. I've tried to freshen it up by seperating the content nicely. Also, wherever relevant I've provided example code snippets, which have been automagically <strong>highlighted</strong> to discern between key words- <code class="inline-code">should make this easier for you</code>!
+                </p>
+                
+                <div class="question left" id="example-question-1"></div>
+                
+                <p>                
+                    Lastly, I've tried supplement the website's content with additional features to aid your user experience- ain't I nice? The website boasts, alongside its user profile tracking, <a class="peekable">tooltips</a><span>Which were a nightmare to construct by the way- you're welcome.</span><span></span> to provide meta information about the subject, an alert bar to give you helpful handy hints (and patronise you, you know, for motivation), as well as a fully fleshed out navigational system and design that, if you're not already crying tears of joy right now, should have you weeping by the fourth or fifth page.   
+                </p>
+                
+                <hr />
+                
+                <p>
+                    <em>
+                        Despite its importance in our future, technologies, with all of their flourishing branches of research and opportunity, can still be a struggle to comprehend. Sometimes, all it takes is somebody to take the time to explain things personably to kickstart the process of understanding. Really, I should be charging for this!
+                    </em>
+                </p>
+                
+            </div>
+            
+            <div class="content-box demo-box">
+            
+                <p>'Reviso' has been developed by 'Josh Hills' for a project at the school of Computer Science @ Newcastle University.</p>
+            
+            </div>
+            
+            <div class="content-box-code center">
+            
+                <video controls>
+                    <source src="images/reviso-video.mp4" type="video/mp4" />
+                </video>
+            
+            </div>
+            
+            <div class="content-box">
+            
+                <div id="terms">
+                
+                    <h3>Important Legal Information &amp; Attributions</h3>
+
+                    <p><strong>'Reviso' Website Copyright &copy; 2015, Josh Hills.</strong></p>
+
+                    <p id="license">
+                        The content of 'Reviso' is being provided under the <a href="http://en.wikipedia.org/wiki/MIT_License">MIT Software License</a>;
+                        respective of contributory factors such as the intellectual properties of other
+                        authors from whom I have adapted or employed code, and their subsequent
+                        permittence of usage, 'Reviso' may be likewise adapted and redistributed
+                        providing proper credit is appropriated under the following summary of liberal terms:
+                    </p>
+
+                    <div class="dark">
+                        <p><em>
+                            Permission is hereby granted, free of charge, to any person obtaining a copy
+                            of this product and associated documentation files ('Reviso'), to deal
+                            the Software without restriction, including without limitation the rights
+                            to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                            copies of the Software, and to permit persons to whom the Software is
+                            furnished to do so, subject to the following conditions:<br /><br />
+
+                            The above copyright notice and this permission notice shall be included in all
+                            copies or substantial portions of the Software.
+                        </em></p>
+                    </div>
+                    
+                </div>
+                
+                <p><strong>Credit:</strong></p>
+                
+                <p id="notice">
+                    The intended purpose of this website is to educate and inform. As such, the usage of
+                    minimal elements of the website, such as select graphics which have been used to aid
+                    visual learning and emphasise key points, fall within the scope of the <a href="http://en.wikipedia.org/wiki/Fair_use">fair use</a> provision
+                    of the <a href="http://en.wikipedia.org/wiki/Copyright_Act_of_1976">'Copyright Act of 1976'</a>- they originate chiefly at <a href="http://www.flickr.com/">'Flickr'</a>.<br /><br />
+
+                    As an honourable mention, the general look-and-feel of the website has been influenced
+                    by that of another educational web-application in a similar vein, <a href="http://www.duolingo.com/">'Duolingo'</a>.<br /><br />
+
+                    The following spools of legal information prepend brief explanations as to the extent
+                    each resource was employed...
+                </p>
+            
+            </div>
+            
+            <div class="content-box demo-box" id="plugins">
+                
+                <p><strong><a href="http://jquery.com/download/">jQuery</a> Copyright &copy; 2015, <a href="http://jquery.org/team/">The jQuery Foundation</a></strong> - <em>Licensed under: <a href="http://en.wikipedia.org/wiki/MIT_License">MIT Software License</a> (found above)</em></p>
+                <p>
+                    I have used the 'jQuery' plug-in to allow for more efficient, readable javascript that can interact fluidly with the webpage.
+                </p>
+                
+                <p><strong><a href="http://highlightjs.org/download/">Highlightjs</a> Copyright &copy; 2006, <a href="http://github.com/isagalaev/">Ivan Sagalaev</a>, all rights reserved.</strong> - <em>Licensed under: <a href="http://www.linfo.org/bsdlicense.html">BSD License</a></em></p>                
+                <p>
+                    I have used the 'Highlightjs' plugin, as the alternative would have been to write my
+                    own near-identical set of 'regex' functions to highlight and discern code-content;
+                    this would defeat the point!
+                </p>
+                
+                <p><strong><a href="https://gist.github.com/Fluidbyte/4718380">SimpleStore Polgyfill 'Gist'</a> 2013, <a href="">Kent Safranski</a></strong></p>
+                <p>
+                    I have used Safranski's fallback for browser local storage as it provides a simple, concise method of accessing local files that alleviated my cross-browser compatibility problems.
+                </p>
+                
+            </div>
+            
+            <!-- Footer consistent per-page. -->
+            <div id="footer">
+
+                <ul id="footer-links">
+                
+                    <li><a href="snippet-glossary.html">Code Glossary</a></li>
+                    <li><a href="javascript:toggleSound()">Sound On/Off</a></li>
+                    <li><a href="javascript:viewSource()">View Page Source</a></li>
+                    <li><a href="javascript:viewTerms()">Terms</a></li>
+                    <li>© <a target="_blank" href="http://github.com/JoshHills">Josh 'Averington' Hills</a>, <a target="_blank" href="http://www.symbiopticstudios.co.uk/">Symbiopticstudios</a>, 2015 <a target="_blank" href="http://www.ncl.ac.uk/undergraduate/modules/module/CSC1026/">for Newcastle University</a></li>
+                
+                </ul>
+                
+            </div>
+            
+        </div>
+    
+    </body>
+    
+</html>

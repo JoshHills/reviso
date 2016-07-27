@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <head>
+        
+        <title>Web Architecture Further</title>
+        
+        <meta charset="UTF-8">
+        <meta name="author" content="Josh Hills">
+        
+        <!-- Import main stylesheet, page-specific stylesheet (if necessary) and a responsive stylesheet. -->
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/main-responsive.css" />
+        
+            <!-- Load plugins & scripts. -->
+        
+        <!-- jQuery -->
+        <script src="plugins/jquery-1.11.2.min.js"></script> 
+        
+        <!-- Highlight.js -->
+        <script src="plugins/highlight.pack.min.js"></script>
+        <link rel="stylesheet" href="plugins/default.min.css" />
+        
+        <!-- Load external operation scripts. -->
+        <script src="scripts/local-information.js"></script>
+        <script src="scripts/tooltip.js"></script>
+        <script src="scripts/question-classes.js"></script>
+        <script src="scripts/questions/architecture-3.js"></script>
+        <script src="scripts/user-operations.js"></script>
+        <script src="scripts/progress-bar.js"></script>
+        <script src="scripts/page-operations.js"></script>
+        <script src="scripts/sections/architecture-3.js"></script>
+        
+        <!-- Link site's favicon to aid browser display. -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        
+    </head>
+
+    <body id="architecture-3">
+
+        <!-- Navigation bar. -->
+        <div id="nav-container">
+            
+            <div id="nav-bar">
+
+                <a href="index.html"><img id="logo" src="images/logo.png" alt="Reviso logo" /></a>
+
+                <ul id="site-map">
+                    <li><a href="index.html">Topics</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+                
+                <div id="progress-bar" class="right"></div>
+
+            </div>
+            
+        </div>
+        
+        <!-- Alert bar. -->
+        <div id="alert-container">
+            <div id="alert-bar">
+                <p id="alert-text"></p><button onclick="hideAlert()">x</button>
+            </div>
+        </div>
+        
+        <!-- Main content block. -->
+        <div class="container">
+        
+            <div class="content-box">
+
+                <div class="header">
+                    <img src="images/topic-headers/architecture-3.jpg" class="header-image" alt="'About' header image." />
+                    <h2 >Web Architecture: Further</h2>
+                </div>
+                
+                <div class="dark">
+                    <p>
+                        As innovation in business oriented technology booms steadily onward, we're seeing an ever important shift from static informative web-content, to the deployment of services with wide-spread effectiveness- the ethos that what you offer via the internet should work quickly and consistently, regardless of the viewport.<br /><br />
+                        As such, we're seeing an increase in the importance of web-architecture offering 'PaaS' functionality- as Matt Robinson of 'Corporate Blog' put it, this is not merely a technology, but an "enabler... the future of application development". It's clear then, that web-architecture needn't be some monolithic element of integrity to the internet, but a genre of its own still being fuelled by its usefulness and potential for productivity.
+                    </p>
+                </div>
+                
+                <p>
+                    Now that's all very nice and eloquent, but why does this apply to us? Well, we're very much interested and invested in the future, especially in the area of technology. This section aims to branch out to a more fringe topic, to help kickstart your exploration of the wide subject that is web-architecture, as well as providing some extra reading and resources for you to explore yourself.
+                </p>
+                
+            </div>
+            
+            <div class="content-box">
+            
+                <h3>Meta Formats:</h3>
+                
+                <img src="images/sections/architecture/tree.png" alt="Tree." class="right" />
+                
+                <div class="key-points right">
+                
+                    <table class="points">
+                    
+                            <tr><td>The web has a structural foundation which is bolstered by considerate functionality.</td></tr>
+                            <tr><td>This manifests encompassed by freedom of description, and internationalisation.</td></tr>
+                                            
+                    </table>
+                
+                </div>
+                
+                <p>
+                   A <strong>metaformat</strong> is a generic format that people can adopt when they're creating their own application-specific languages or data-storage-formats. They're incredibly useful, as you don't have to re-invent any syntax, or struggle within the restrictions of one. Simply put, they're a space to make something incredibly specific to you, which you can then parse how you please. 
+                </p>   
+                
+                <p>
+                    They're important to the architecture of the web, because so far we've covered at a low level its pre-existing structure, protocols that govern the structure, and how the information is transmitted between recepticles such as devices connected to it. Now, let's look at the actual format of the <em>information being sent</em> (as odd as it sounds, they're often built like <strong>trees</strong>).
+                </p>
+                
+            </div>
+            
+            <div class="content-box demo-box">
+                
+                <p>
+                    Specific, popular formats available fall under the monikers of 'XML', JSON' etc... We'll look at one in particular, and describe why it's awesome.
+                </p>
+            
+            </div>
+            
+            <div class="content-box-code">
+            
+                <h3>XML:</h3>
+                
+                <p>
+                    Meaning '<em>eXtensible Markup Language</em>', XML is one of the aforementioned useful self-defined-and-therefore-customisable vestibules of information.
+                </p>
+                
+                <p>
+                    The language itself has few rules, other than that there must be a tag consisting of the version number, and all elements must be properly nested. Other than that, you can go wild! Uses are generally universal, and context-specific. As a real-world example, XML is often used to store language-translations for certain things, in the aid of internationalisation and inclusive design. For example:
+                </p>
+                
+                <div>
+                
+                    <pre><code id="architecture-2-3-xml" class="load inline-code"></code></pre>
+                
+                </div>
+                
+                <p>
+                    As you can see, information is represented as labelled trees that allow free-choice when it comes to their markup vocabulary. This makes it incredibly useful for data-transfer, and for storing information on the <a class="peekable">web</a><span>xhtml is actually based off xml</span><span></span>. These kinds of metaformatted languages are also used in machine-to-machine use, where specific contexts flourish and can be accounted for.
+                </p>
+                
+                <p>
+                    For more information about this area, you can visit the <a href="http://www.w3.org/standards/webarch/metaformats">W3C page dedicated to them</a>.
+                </p>
+            
+            </div>
+            
+            <div class="content-box">
+            
+                <h3>Internationalization:</h3>
+                
+                <div class="dark">
+                
+                    <p>
+                        The world is becoming increasingly inter-connected. This means that to help the most people, or reach the biggest audience, the services you provide as a web-developer should be as homogenous as possible. <a class="peekable">Internationalization</a><span>often abbreviated as 'i18n'</span><span></span> is the concept of developing something that is easily adapted for users from any culture, region, or language. It might not be immediately apparent, or urgently important, but it's a problem you must specifically address as a business or idea grows.
+                    </p>
+                
+                </div>
+                
+                <div class="question right" id="architecture-3-1"></div>
+                
+                <p id="internationalize">
+                    HTML, which is covered in more depth as a later topic, demonstrates, conveying and displaying information is vital. One fundamental aspect of internationalization is to ensure that all textual systems are supported- this is called 'Unicode', and it is what the web is built to use. This accounts for things like vertical-writing and unique symbols. Some clients also support the automatic conversion of languages, but this does not account for a disparity in cultural symbolism. Don't stress, however, that your first projects must all have to be synchronous in every part of the world! Simply display a contextual awareness to others needs where and whenever appropriate!
+                </p>
+                
+                <input type="button" id="change-language" class="english" value="Switch Language!" onclick="changeLanguage()" />
+            
+            </div>
+            
+            <div class="content-box">
+                
+                <h3>Implementation:</h3>
+            
+                <p>
+                    Here's something they never teach you in the classroom- the way in which these amazing learned structures and skills are actually applied to real-world scenarios. The internet, as we know, is an unfathomably <a class="peekable">large</a><span>in 2014, google's 200 terabytes of <a href="http://computer.howstuffworks.com/internet/basics/google1.htm">indexed</a> information still only made up 0.004% of everything</span><span></span> hub of inter-communication, so let's examine how this web-architecture actually transmits to a physical environment.
+                </p>
+                
+                <h3>Cloud storage, data centres, and lots of cables...</h3>
+                
+                <div class="dark">
+                    
+                    <p>
+                        While people often believe that this system is immaterial, businesses often operate out of large warehouses full of data servers delivering content to voracious clickers. To dash your dreams, 'the cloud' is, in fact, not a bunch of computers tied to balloons floating above us eagerly ready to let you access virtual machines and dole out illicit photographs, but probably resembles a something closer to the set design of a science-fiction movie.
+                    </p>
+                    
+                </div>
+                
+                <img src="images/sections/architecture/data-server.png" alt="What a data server looks like." title="Don't touch!" class="right" />
+                
+                <p>
+                    In fact, these centres have to be micromanaged to such an extent to ensure smooth functionality, that organising the physical cables has <a href="http://royal.pingdom.com/2008/01/24/when-data-center-cabling-becomes-art/">become somewhat of an art</a>. It's a matter of engineering, and way too much handiwork for us lazy programmers, however it's handy to understand the context of your work- if you rent a space such as this, you'd have to manage it! Large-scale operations usually have complexes which handle the flow of content in a very specific way- some benefit greatly from ad revenue, and might reserve resources and even full buildings of servers dedicated to flooding your screen with <a class="peekable">persuasive</a><span><img src="images/sections/architecture/adverts.jpg" alt="Annoying advertisement." /></span><span></span> content.
+                </p>
+                
+                <h3>Security:</h3>
+                
+                <p>
+                    As Edward Mercer of 'Small Business Blog' elucidated for me during my own research: "<em>most data centers implement comprehensive security measures that include data encryption during transmission, multiple saving locations in case one server becomes disabled, simultaneous saving at two or more locations so that files can be reconciled and backed up in case they are not properly saved at one, and complete wipes of disk data when a server has exhausted its useful life</em>". It's an important, and lucrative business, with a complex mesh of networks upholding the services for infrastructure ranging from 'kanbans' systems systems in goods-distribution, to the seemingly instant processing of queries tapped into any search engine!
+                </p>
+                
+                <p>
+                    Diverging gracefully from the pivotal point of PC privacy, the term 'hacking', disregarding it's caricatured <a class="peekable">stereotype</a><span><img src="images/sections/architecture/hacker.jpg" alt="Generic hacker." /></span><span></span> really just refers to an interception or disruption of this intricate web-architecture, as seen below...
+                </p>
+            
+            </div>
+            
+            <div class="content-box-anecdote">
+    
+                <h3>Under the mask.</h3>
+                
+                <p>  
+                    <em>When it comes to cyber-criminals, there's no shortage of interesting figures. Glasgow-born <strong>Gary McKinnon</strong> is one such figure; in 2002, the well-intentioned systems-administrator-turned-'hacker' was accused of perpetrating the "biggest military computer hack of all time"...</em>                
+                </p>
+                
+                <img src="images/sections/architecture/gary-mckinnon.jpg" alt="Gary McKinnon Headshot." class="right" />
+                
+                <p>
+                    McKinnon was accused of hacking into 97 United States military and NASA computers from a house in London, under the pseudonym '<a class="peekable">Solo</a><span>why do they always sound so cool?!</span><span></span>'; he allegedly deleted critical files from the operating systems of the Military District of Washington that resulted in the shut-down of 2000 computers for a 24-hour period to the tune of $700,000 worth of damages. While that doesn't sound incredibly egregious by today's standards, it must be noted that he also took advantage of stint to copy data such as passwords and account files <em>en masse</em>, and left a friendly message stating "your security is crap". Nice touch. But... why?    
+                </p>
+                
+                <p>
+                    Believe it or not, the answer lies far below the belt of malice or personal-gain. Since the event, further clarity has been shed upon what motivates a man to technologically provoke such an authorative force- from his media appearances, the answer: UFOs.
+                </p>
+                
+                <p>
+                    <em>Breaking it down, McKinnon stated that he was able to get access to the networks by simply using a <a href="http://www.perl.org/">Perl</a> script that searched for accounts that still had blank- ergo, <strong>default</strong> user passwords, and travel from there. This goes to show how no matter how complex your system, human error is still a huge factor that should be designed around- see, not procrastinating here- learning! This could be resolved by more secure authenticating systems such as those used at banks which include several steps of confirmation.</em>
+                </p>
+            
+                <p>
+                    Anyway, floating back to aliens, McKinnon simply innocently intended to be a pioneer of free information- the purpose of his tomfoolery "was to find evidence of UFOs, antigravity technology, and the suppression of 'free energy'". In accessing these secret databases, he hoped to uncover information that could aid the overall technological growth of the world, were it not being hoarded by those sneaky Americans. While this premise may sound farfetched, this <a href="http://www.todayifoundout.com/index.php/2014/11/shockingly-old-history-fax-machine/">has actually happened before</a> in different ways, and this lends itself well to his credibility- so much so, that his noble cause was <a class="peekable">supported</a><span>in august 2009, pink floyd's david gilmour released a single online to back his efforts for freedom of information</span><span></span> by the general public to the extent that he was never properly reprimanded.
+                </p>
+                
+                <p>
+                    The <strong>moral to draw from this</strong>, of course, is that these systems you're revising aren't merely theoretical- they've been around for a while, and they've been subject to change. The topics are too big to ever summarise, but you should at least get the impression that, like any type of subject and it's accompanying factual spread, they're surrounded by colourful coincidences, messy mistakes and innovative inspiration.
+                </p>
+                
+            </div>
+            
+            <div class="content-box">
+                             
+                <img src="images/sections/architecture/brain.png" alt="Brain." class="right" />
+            
+                <h3>The Bigger Picture:</h3>
+                
+                <p>
+                   So, having dabbled in many specific and not-so-specific areas of computer architecture, we can finally pull it all together to examine the bigger picture- the whole machine as the sum of its cogs. I mentioned at the start of the section that the internet is shaping cultures, but how are these huge networks achieving this?
+                </p>
+                
+                <p>
+                    Quoting an <a href="" target="_blank">article</a> by <a class="peekable">W. Tecumseh Fitch</a><span>department of cognitive biology, university of vienna</span><span></span> on <a href="http://edge.org/annual-question/how-is-the-internet-changing-the-way-you-think" target="_blank">how the internet is changing the way we think</a>, what makes the internet special is the "<em>many-to-many topology of connections it allows... to transfer essentially any information, flexibly and efficiently"</em>. He develops this concept of an 'evolving global brain', strikingly captured in this anecdote:
+                </p>
+                
+                <div class="dark">
+                
+                    <p>
+                        Since Gutenberg, human society has slowly groped its way toward a new organisational principle. The internet completes this process. Now arbitrarily far-flung individuals can link, share information, and base their decisions on this new shared source of meaning. Like individual neurons in our neocortex, each human can potentially influence and be influenced, rapidly, by information from anyone, anywhere. We, the metaphoric neurons of the global brain, are on the brink of a wholly new system of societal organization, one spanning the globe with the metaphoric axons of the internet linking us together. <strong>The protocols are already essentially in place. TCP/IP and HTML are the global-brain equivalents of neurotransmitters: universal protocols for information transfer</strong>.
+                    </p>
+                
+                </div>
+            
+                <p>
+                    It sounds far-fetched, but this serves to highlight the importance of the way we go about planning these systems. Otherwise, we could potentially incur some sort of virtual-disease for our virtual brain, that would lead to its collapse!
+                </p>
+                
+            </div>
+            
+            <!-- Section navigation. -->
+            <a href="architecture-2.html" class="nav-button left">Back</a>
+            <a href="html-1.html" class="nav-button right">Next Topic</a>
+
+            <!-- Footer consistent per-page. -->
+            <div id="footer">
+
+                <ul id="footer-links">
+
+                    <li><a href="snippet-glossary.html">Code Glossary</a></li>
+                    <li><a href="javascript:toggleSound()">Sound On/Off</a></li>
+                    <li><a href="javascript:viewSource()">View Page Source</a></li>
+                    <li><a href="javascript:viewTerms()">Terms</a></li>
+                    <li>© <a target="_blank" href="http://github.com/JoshHills">Josh 'Averington' Hills</a>, <a target="_blank" href="http://www.symbiopticstudios.co.uk/">Symbiopticstudios</a>, 2015 <a target="_blank" href="http://www.ncl.ac.uk/undergraduate/modules/module/CSC1026/">for Newcastle University</a></li>
+
+                </ul>
+
+            </div>
+    
+        </div>
+            
+    </body>
+    
+</html>

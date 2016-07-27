@@ -1,0 +1,117 @@
+/* File encapsulates the bespoke CSS demonstrations for this page. */
+
+#dynamic-selectors pre {
+    
+    width: 60%;
+    max-height: 600px;
+    
+}
+
+#dynamic-selectors > div {
+    
+    max-width: 35%;
+       
+}
+
+#dynamic-selectors div > h3 {
+    
+    font-size: 38pt;
+    
+}
+
+#dynamic-selectors div > p {
+    
+    margin-top: 5px;   
+    margin-bottom: 15px;
+    
+}
+
+#user-selection-path {
+    
+    width: calc(100% - 20px);
+    padding: 10px 10px 15px 10px;
+    margin-bottom: 20px;
+    font-size: 24pt;
+    border: 0;
+    transition: background-color 0.5s ease;
+    background-color: #333333;
+    color: #cccccc;
+    
+}
+
+#dynamic-selectors div > input:focus {
+ 
+    outline: none;
+    
+}
+
+#num-elements {
+    
+    font-size: 30pt;
+    
+}
+
+#dynamic-selectors div .question {
+ 
+    margin-right: 0;
+    
+}
+
+.nomatch {
+    
+    background-color: #80212B !important;
+    
+}
+
+#example-div div p {
+
+    top: 5px;
+    background-color: yellow;
+    color: green;
+
+}
+
+#example-div {
+
+    color: grey;
+    text-align: center;
+}
+
+#example-div div {
+    
+    padding: 20px !important;
+    font-size: 20pt;
+    
+}
+
+#example-div div p.my-class {
+
+    color: blue;
+
+}
+
+#example-div * {
+
+    margin-top: 40px;
+    background-color: red !important;
+
+}
+
+/* If the screen is below 985 pixels in width, the below style-rules apply. */
+@media screen and (max-width: 985px) {
+ 
+    #dynamic-selectors pre {
+    
+        width: 100%;
+        max-height: 500px;
+
+    }
+    
+    #dynamic-selectors > div {
+    
+       max-width: 100%;
+       margin-bottom: 20px;
+        
+    }
+    
+} 

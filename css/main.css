@@ -1,0 +1,1013 @@
+/*
+
+Author: Josh Hills
+
+The main stylesheet to be applied to site-wide content; visual polish has been applied utilising HTML5 and CSS3 compatible rules, however page elements should still function in a somewhat backward-compatible manner. The stylistic structure of the document is such that prioritised rules are applied foremost- e.g. position > size > text > color > dynamic-style > superflous style...
+
+*/
+
+/* Provide local font in case the running system does not already have it installed. */
+@font-face {
+ 
+    font-family: Gautami;
+    src: url('../gautami.ttf') format('truetype');
+    
+}
+
+.highlighted {
+    
+      background-color: #F0C83C;
+    
+}
+
+html {
+    
+    /* Fixes scaling issue on devices with smaller screens. */
+    zoom: .90;   
+    
+}
+
+body {
+    
+    /* Force website to span full width of page for precise layout. */
+    margin: 0;
+    /* Padding forces global boundaries that align with fixed navigation bar, and pushes content down to remove initial overlap. */
+    padding: 160px 75px 20px 75px;
+    
+    /* Website's chosen general typeface and adjustments. */
+    font-family: Gautami;
+    line-height: 1.2;
+    
+    /* Contrast background with information. */
+    background-color: rgb(230,230,230);
+    
+    background-image: url(../images/background.jpg);
+    
+    background-repeat: no-repeat;
+    background-position: bottom;
+    
+}
+
+/* To style on-the-fly when determining page-flow of HTML, define simply applicable structural classes. */
+.left {
+    
+    float: left;   
+    
+}
+
+.right {
+    
+    float: right;   
+    
+}
+
+.inline {
+    
+    display: inline;
+    
+}
+
+.center {
+ 
+    text-align: center;
+    
+}
+
+    /* NAVIGATION BAR */
+
+/* Container for navigation bar constricts position and size. */
+#nav-container {
+    
+    /* Anchor navigation bar to the top of the screen, make it span the width. */
+    height: 63px;
+    min-width: 390px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    /* Mimic body boundaries. */
+    padding: 17px 75px 17px 75px;
+    
+    /* Force content to remain above. */
+    z-index: 4;
+    
+    /* Make bar slightly transparent. */
+    background-color: rgba(80,230,60,0.9);   
+    
+}
+
+/* Content of navigation bar. */
+#nav-bar {
+    
+    /* Allow bar to scale between reasonable bounds. */
+    max-width: 1600px;
+    /* Set height calculated from mock-up. */
+    height: 63px;
+    /* Center bar. */
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+/* Ensure all inner elements are vertically centered for tidyness. */
+#nav-bar * {
+    
+    vertical-align: middle;
+    
+}
+
+/* Slightly adjust position of logo, and provide gap to seperate it from navigational elements. */
+#logo {
+    
+    margin-right: 55px;
+    position: relative;
+    bottom: 3px;
+    
+}
+
+/* Navigational buttons. */
+#site-map {
+    
+    /* Clear default styles. */
+    padding: 0px;
+    list-style: none;
+    
+    /* Force the list to appear horizontal. */
+    display: inline;
+    
+}
+
+/* Style individual button components. */
+#site-map > li {
+    
+    /* Shift the position of the buttons. */
+    position: relative;
+    display: inline;
+    top: 5px;
+    
+    /* Place invisible gap to shift buttons. */
+    margin-right: 15px;
+    
+    /* Shape the buttons. */
+    padding-left: 15px;
+    padding-right: 15px;
+    
+    font-size: 20pt;
+    
+    /* Make them rounded. */
+    border-radius: 30px;
+    
+    /* Set a transparent background color and instruct the browser to render background-changes in a fluid manner. */
+    transition: background-color .5s;
+    
+}
+
+/* Change the background color of the buttons upon hover. */
+#site-map > li:hover {
+    
+    background-color: #4b9141;
+    
+}
+
+/* Adapt all link-styling of buttons. */
+#site-map > li a,
+#site-map > li a:link,
+#site-map > li a:visited,
+#site-map > li a:hover,
+#site-map > li a:active {
+
+    /* Shift the text. */
+    position: relative;
+    top: 3px;
+    
+    /* Change the font. */
+    font-family: Coolvetica;
+    color: #ffffff;
+    text-decoration: none;
+
+}
+
+.active {
+    
+    background-color: rgb(75,145,65);   
+    
+}
+
+    /* PROGRESS BAR */
+
+#progress-bar {
+
+    height: 63px;
+    width: 521px;
+    padding: 10px;
+    position: relative;
+    top: 0;
+    
+    float: right;   
+    
+    /* Allow items inside to resize dynamically and evenly. */
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+    
+    /* Make the bar fit the page's theme. */
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    border: 3px solid #F0C83C;
+    border-radius: 32px;
+    
+}
+
+.progress-chunk {
+    
+    /* Allow the items to expand evenly to fill the inside space. */
+    flex-grow: 1;
+    
+    /* Space them slightly. */
+    margin: 0px 5px 0px 5px;
+    
+    /* Give the bar some visual flair. */
+    background-color: #F0C83C;
+    background-image: url(../images/progress-bar/bubble-overlay.png); 
+    
+    /* By default, hide chunk. */
+    visibility: hidden;
+    
+}
+
+/* Make the first chunk fit the style of its container. */
+#progress-bar > div:first-child {
+    
+    margin-left: 0;   
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    
+}
+
+/* Make the last chunk fit the style of its container. */
+#progress-bar > div:last-child {
+    
+    margin-right: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    
+}
+
+/* Do not visibly display certain page content. */
+.viewed {
+    
+    visibility: visible;
+    
+}
+
+/* Change the color to signify completion. */
+.completed {
+    
+    background-color: #4b9141;
+    
+}
+
+    /* ALERT BAR */
+
+#alert-container {
+    
+    /* Anchor alert bar to the top of the screen, beneath the nav bar. Make it span the width. */
+    position: fixed;
+    top: 92px;
+    left: 0px;
+    right: 0px;
+    /* Mimic body boundaries. */
+    padding: 17px 75px 17px 75px;
+    
+    /* Force content to remain above. */
+    z-index: 4;   
+    
+    /* Define an opacity transition, defaulting to hidden. */
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 0.20s, opacity 0.20s linear;
+    
+}
+
+#alert-bar {
+    
+    /* Allow bar to scale between reasonable bounds. */
+    max-width: 1580px;
+    min-width: 370px;
+    height: 20px;
+    /* Give inner-text space. */
+    padding: 10px;
+    
+    /* Center bar. */
+    margin-left: auto;
+    margin-right: auto;
+    
+    /* Color the contents. */
+    color: #000000;
+    background-color: #F0C83C;
+    
+    /* Align the text nicely and ensure it doesn't flow off the bar. */
+    text-align: center;
+    overflow: hidden;
+    
+    /* Make the bar fit with the rounded theme of the website. */
+    border-radius: 30px;
+    
+}
+
+#alert-bar p {
+ 
+    /* Shift text slightly. */
+    position: relative;
+    bottom: 1px;
+    left: 5px;
+    /* Remove the margin. */
+    margin: 0;
+    
+    /* Ensure no wrapping occurs. */
+    line-height: normal;
+    display: inline-block;    
+    overflow: hidden;
+    /* Leave room for button at the end. */
+    max-width: calc(100% - 50px);
+    
+}
+
+#alert-bar button {
+    
+    cursor: pointer;
+    
+    /* Keep the button on the right. */
+    float: right;
+    position: relative;
+    right: 5px;
+    top: 1px;
+    
+    /* Modiify the styling provided by the webkit. */
+    background-color: rgb(235,235,235);
+    border: 0 none;
+    border-radius: 10px;
+    
+}
+
+/* Provide class to switch to when temporarily visible- this keeps transitional animations in pure CSS. */
+.shown {
+    
+    /* 'important' keyword ensures properties override others. */
+    visibility: visible !important;
+    opacity: 1 !important;
+    /* Necessary for firing both at the same time. */
+    transition-delay: 0s !important;
+    
+}
+
+    /* MAIN CONTENT */
+
+/* Class encapsulates main content blocks. */
+.container {
+
+    /* Allow website to scale between reasonable bounds. */
+    max-width: 1600px;
+    min-width: 610px;
+    /* Center content. */
+    margin-left: auto;
+    margin-right: auto;
+    
+    text-align: justify;
+    
+}
+
+/* Custom styled content-block (also apply most defaults to subset of content box. */
+.content-box, .content-box-code {
+    
+    /* Add an inset for clarity. */
+    padding: 40px;
+    /* Add a margin to seperate it from other content-boxes. */
+    margin-bottom: 40px;
+    /* Give the box a position. */
+    position: relative;
+    min-width: 310px;
+
+    /* Add box style. */
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 0px 8px 0.00px rgba(0, 0, 0, 0.15);
+    
+    /* Hide overflow content. */
+    overflow: hidden;
+    
+    /* Text styling. */
+    font-size: 16pt;
+    color: #777777;
+    
+    z-index: 1;
+    
+}
+
+/* Style themed content-box. */
+.content-box-anecdote {
+    
+    /* Add an inset for clarity. */
+    padding: 40px;
+    padding-left: 100px;
+    /* Add a margin to seperate it from other content-boxes. */
+    margin-bottom: 40px;
+    /* Give the box a position. */
+    position: relative;
+    min-width: 245px;
+    
+    /* Text styling. */
+    font-size: 16pt;
+    
+    /* Apply themed background. */
+    background-image: url(../images/story-box.png);
+    background-repeat: repeat-y;
+    background-size: 1600px auto;
+    /* 'Drop-shadow' follows the contours of the '.png' background image. */
+    -webkit-filter: drop-shadow(-5px 5px 2px rgba(0,0,0,0.5));
+    
+}
+
+/* Add visual flair to content box aftwerwards. */
+.content-box-anecdote::after {
+    
+    content: url(../images/story-graphic.png);
+    position: absolute;
+    top: -30px;
+    right: 10px;
+    right: 10px;
+    
+}
+
+/* Ensure the content boxes are not bigger than they need be. */
+.content-box > *:last-child:not(.question):not(video),
+.content-box-anecdote > *:last-child:not(.question):not(video),
+.content-box-code > *:last-child:not(.question):not(video) {
+    
+    margin-bottom: 0 !important;
+    
+}
+
+/* Ensure images within content blocks scale properly. */
+.content-box > img,
+.content-box-anecdote > img,
+.content-box-code > img {
+    
+    /* Ensure any included images auto-shrink as container changes. */
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;
+    margin-bottom: 10px;
+    
+}
+
+.content-box > img.left,
+.content-box-anecdote > img.left,
+.content-box-code > img.left {
+    
+    margin-right: 40px;
+    
+}
+
+.content-box > img.right,
+.content-box-anecdote > img.right,
+.content-box-code > img.right {
+    
+    margin-left: 40px;
+    
+}
+
+
+/* Adapt style of page's links to fit site-wide theme. */
+a, a:link, a:visited {
+
+    text-decoration: none;
+    color: rgb(75,145,65);
+
+}
+
+a:hover, a:active {
+    
+    text-decoration: none;
+    color: rgba(80,230,60,.9);  
+    
+}
+
+/* Style an invisible link enable a div to be clickable- this protects backwards-compatibility as wrapping a div in an anchor is only allowed in HTML5. */
+a.div-link {
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* Remove styling. */
+    text-decoration: none;
+    
+    /* Position above the div. */
+    z-index: 3;
+    
+}
+
+    /* CODE CONTENT */
+
+/* Select content displayed with formatting intact. */
+pre {
+    
+    /* Force the text to wrap, with a scrollbar for y-axis overflow. */
+    max-height: 500px;
+    margin: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    
+    /* Add space for scroll-bar. */
+    padding-right: 12px;
+    
+    font-size: 14pt;
+    text-align: left;
+    
+}
+
+/* Make it contrast its container. */
+.demo-box pre {
+    
+    background-color: #dddddd;   
+    
+}
+
+/* Create a custom scrollbar for it. */
+pre::-webkit-scrollbar {
+    
+    width: 12px;
+    
+}
+
+/* Style the scrollbar's 'track'. */
+pre::-webkit-scrollbar-track {
+    
+    background: rgba(255,255,255,0.3); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    
+}
+
+/* Style the scrollbar's 'thumb'. */
+pre::-webkit-scrollbar-thumb {
+    
+    background: rgba(255,255,255,0.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    
+}
+
+/* Clear a space for the content to appear below the header. */
+.header {
+    
+    margin-bottom: 130px;
+    
+}
+
+/* Image to appear as a header for visual cue. */
+.header-image {
+    
+    /* Position the header image at the absolute top and center of the container. */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -960px;
+    
+}
+
+/* Tag chosen to couple with image header. */
+h2 {
+    
+    /* Align it with the header-image. */
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    margin-right: 40px;
+    
+    /* Make it larger. */
+    font-size: 70px;
+    font-weight: 100;
+    
+    /* Make it stand out. */
+    color: #ffffff;
+    text-shadow: 0 0 5px #000000;
+    
+    /* Stop it overpowering the elements below if the screen is made unreasonable small. */
+    white-space: nowrap;
+    
+}
+
+/* Syle a dividing area. */
+.dark {
+
+    /* Ensure div fills width of container. */
+    width: 100%;
+    margin-left: -40px;
+    padding: 20px 40px 10px 40px;
+    margin-bottom: 30px;
+    
+    /* Color it appropriately for differentiation from other areas of the parent. */
+    background-color: rgb(75,145,65);
+    color: #ffffff;
+    
+}
+
+/* Tag chosen to serve as sub-title. */
+h3 {
+
+    margin: 0;
+    font-size: 40px;
+    
+}
+
+/* Style videos to fill containers. */
+video {
+    
+    height: auto; 
+    width: calc(100% + 80px); 
+    max-width: 800px;
+    /* Circumvent container margin. */
+    margin: -40px;
+    /* Remove inherent element gap. */
+    vertical-align: top;
+    
+}
+
+    /* TOOLTIPS */
+
+/* Style text which has a tooltip. */
+.peekable, .peekable:hover {
+
+    /* Make it stand out. */
+    color: #F0C83C; 
+    text-decoration: underline;
+    
+}
+
+/* Generally style the tooltip and it's addition. */
+.peekable + span,
+.peekable + span + span {
+    
+    /* Give a default position. */
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    /* Define an opacity transition, defaulting to hidden. */
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 0.20s, opacity 0.20s linear;   
+    
+}
+
+/* Style the body of the tooltip. */
+.peekable + span {
+    
+    /* Allow the tooltip's inner-text some space. */
+    padding: 15px;
+    padding-bottom: 3px;
+    /* Enforce width auto-adjust. */
+    width: auto;
+    /* Define a max-width to fit snugly within the smallest min-width of the parent container. */
+    max-width: 290px;
+    
+    /* Color the contents. */
+    color: #000000;
+    background-color: #F0C83C;
+    
+    border-radius: 10px;
+    
+}
+
+.peekable + span img {
+    
+     /* Ensure any included images auto-shrink as container changes. */
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;   
+    
+}
+
+.peekable + span + span {
+    
+    /* Re-center the content with a negative margin. */
+    margin-left: -8px;
+    /* Make the content a point. */
+    width: 0;
+    height: 0;
+    
+    /* Give the point borders such that a triangle forms. */
+    border-top: 8px solid #F0C83C;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    
+}
+
+/* On hover, make the tooltip visible. */
+.peekable:hover + span,
+.peekable:hover + span + span {
+
+    visibility: visible;
+    opacity: 1;
+    /* Necessary for firing both at the same time. */
+    transition-delay: 0s;
+    
+}
+
+/* Keep the tooltip visibile if it is being targeted. */
+.peekable + span:hover,
+.peekable + span:hover + span {
+    
+    visibility: visible;
+    opacity: 1;
+    
+}
+
+/* Style key-points list for clarity. */
+.key-points {
+    
+    margin: 20px 0px 40px 40px;
+    /* Define a max-width to fit snugly within the smallest min-width of the parent container. */
+    max-width: 265px;
+    
+    /* Color and align the contents. */
+    color: #000000;
+    background-color: #F0C83C;
+    text-align: left;
+    border-radius: 15px;
+    overflow: hidden;
+    
+}
+
+.points {
+    
+    /* Collapse the borders so there's no annoying gap. */
+    border-collapse: collapse;   
+    
+}
+
+.points td {
+    
+    /* Give each row some space and re-align the text. */
+    padding: 10px;
+    position: relative;
+    top: 5px;
+    
+}
+
+/* Differentiate the points from eachother. */
+.points tr:nth-child(odd) {
+    
+    background-color: #F0E0AA;
+    
+}
+
+    /* QUESTION BOX */
+
+.question {
+    
+    /* Style it for appearing next to text. */
+    padding: 20px;    
+    margin-right: 20px;
+    margin-bottom: 20px;
+    max-width: 500px;
+    
+    /* Make text flow around them. */
+    display: inline-block;
+    
+    text-align: left;
+    
+    /* Give it visible boundaries. */
+    border: 1px solid #999999;
+    border-radius: 15px;
+    transition: box-shadow .25s;
+    
+    /* Ensure overflow is hidden (this enables nicely styled validation button) */
+    overflow: hidden;
+    
+}
+
+.demo-box .question {
+    
+    border-color: #ffffff;
+    
+}
+
+.question.left {
+ 
+    margin-right: 40px;
+    
+}
+
+.question.right {
+ 
+    margin-left: 40px;
+    
+}
+
+.question img {
+    
+    /* Ensure any included images auto-shrink as container changes. */
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;   
+    
+}
+
+.question p {
+    
+    margin: 5px 0px 5px 0px;   
+    
+}
+
+.check-container {
+    
+    position: relative;
+    margin-top: 15px;
+    margin-left: -40px;
+    margin-right: -40px;
+    margin-bottom: -21px;
+    height: 50px;
+    background-color: rgba(80,230,60,.9);
+    color: #ffffff;
+    text-align: center;
+    
+}
+
+.check-container p {
+    
+    margin: 0;
+    position: relative;
+    top: 18px;
+    
+}
+
+.question button {
+    
+    width: 100%;
+    height: 50px;
+    
+}
+
+.question input[type="text"] {
+    
+    font-size: 14pt;
+    width: 100%;
+    
+}
+
+.success {
+    
+    border: 1px solid rgba(80,230,60,.9) !important;
+    
+}
+
+.success input[type="text"] {
+ 
+    color: rgba(80,230,60,.9);
+    
+}
+
+/* Unique content box for exclusively displaying code. */
+.content-box-code {
+    
+    background-color: black;
+    color: white;
+    
+}
+
+/* Unique demo box for demonstrating points. */
+.demo-box {
+    
+    /* Inset the box. */
+    margin-top: -80px;
+    padding-top: 80px;
+    
+    /* Position it behind the other boxes. */
+    z-index: 0;
+    
+    /* Give it unique coloring. */
+    color: #ffffff;
+    background-color: #999999;
+    box-shadow: inset 0px 0px 25px #666666;
+    
+}
+
+/* Class that forces a demo box between two content-boxes. */
+.between {
+    
+    margin-bottom: -40px;
+    padding-bottom: 80px;
+    
+}
+
+    /* PAGE NAVIGATION */
+
+a.nav-button {
+    
+    /* Give the link some space. */
+    width: 140px;
+    padding: 20px 15px 10px 15px;
+    margin-bottom: 40px;
+    
+    /* Make the buttons fit the page's theme. */
+    border-radius: 15px;
+    color: #dddddd;
+    font-size: 16pt;
+    
+}
+
+a.nav-button:hover {
+    
+    /* Indicate hover. */
+    color: #ffffff;
+    
+}
+
+/* Flip styling for left-aligned link. */
+a.nav-button.left {
+    
+    padding-right: 35px;
+    
+    /* Generated gradient with IDE. */
+    background: -moz-linear-gradient(left, rgba(74,146,64,1) 0%, rgba(74,146,64,0.75) 50%, rgba(74,146,64,0) 90%, rgba(74,146,64,0) 100%);
+    background: -webkit-linear-gradient(left, rgba(74,146,64,1) 0%,rgba(74,146,64,0.75) 50%,rgba(74,146,64,0) 90%,rgba(74,146,64,0) 100%);
+    background: -ms-linear-gradient(left, rgba(74,146,64,1) 0%,rgba(74,146,64,0.75) 50%,rgba(74,146,64,0) 90%,rgba(74,146,64,0) 100%);
+    background: linear-gradient(to right, rgba(74,146,64,1) 0%,rgba(74,146,64,0.75) 50%,rgba(74,146,64,0) 90%,rgba(74,146,64,0) 100%);
+    
+    text-align: left;
+    
+}
+
+/* Flip styling for right-aligned link. */
+a.nav-button.right {
+    
+    padding-left: 35px;
+    
+    /* Generated gradient with IDE. */
+    background: -moz-linear-gradient(right, rgba(74,146,64,1) 0%, rgba(74,146,64,0.75) 50%, rgba(74,146,64,0) 90%, rgba(74,146,64,0) 100%);
+    background: -webkit-linear-gradient(right, rgba(74,146,64,1) 0%,rgba(74,146,64,0.75) 50%,rgba(74,146,64,0) 90%,rgba(74,146,64,0) 100%);
+    background: -ms-linear-gradient(right, rgba(74,146,64,1) 0%,rgba(74,146,64,0.75) 50%,rgba(74,146,64,0) 90%,rgba(74,146,64,0) 100%);
+    background: linear-gradient(to left, rgba(74,146,64,1) 0%,rgba(74,146,64,0.75) 50%,rgba(74,146,64,0) 90%,rgba(74,146,64,0) 100%);
+    
+    text-align: right;
+    
+}
+
+    /* FOOTER */
+
+/* Force footer to ignore other content and display itself consistently. */
+#footer {
+    
+    clear: both;
+    
+}
+
+#footer-links {
+    
+    /* Seperate the footer from preceding content. */
+    margin-top: 40px;
+    padding-left: 0;
+    
+}
+
+#footer-links > li {
+    
+    /* Add a gap after each footer item. */
+    margin-right: 50px;
+    /* Force links to display in a row. */
+    display: inline;
+    
+    color: #999999;
+    
+}
+
+/* Adapt style of footer links. */
+#footer-links > li a,
+#footer-links > li a:link,
+#footer-links > li a:visited,
+#footer-links > li a:active {
+
+    text-decoration: none;
+    color: #999999;
+
+}
+
+#footer-links > li a:hover {
+ 
+    text-decoration: none;
+    color: #5C5C5C;
+    
+}

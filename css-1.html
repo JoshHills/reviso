@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <head>
+        
+        <title>CSS Basics</title>
+        
+        <meta charset="UTF-8" />
+        <meta name="author" content="Josh Hills" />
+        
+        <!-- Import main stylesheet, page-specific stylesheet (if necessary) and a responsive stylesheet. -->
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/main-responsive.css" />
+        <link rel="stylesheet" href="css/sections/css/css-1.css" />
+        
+            <!-- Load plugins & scripts. -->
+        
+        <!-- jQuery -->
+        <script src="plugins/jquery-1.11.2.min.js"></script> 
+        
+        <!-- Highlight.js -->
+        <script src="plugins/highlight.pack.min.js"></script>
+        <link rel="stylesheet" href="plugins/default.min.css" />
+        
+        <!-- Load external operation scripts. -->
+        <script src="scripts/local-information.js"></script>
+        <script src="scripts/tooltip.js"></script>
+        <script src="scripts/question-classes.js"></script>
+        <script src="scripts/questions/css-1.js"></script>
+        <script src="scripts/user-operations.js"></script>
+        <script src="scripts/progress-bar.js"></script>
+        <script src="scripts/page-operations.js"></script>
+        <script src="scripts/sections/css-1.js"></script>
+        
+        <!-- Link site's favicon to aid browser display. -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        
+    </head>
+
+    <body id="css-1">
+
+        <!-- Navigation bar. -->
+        <div id="nav-container">
+            
+            <div id="nav-bar">
+
+                <a href="index.html"><img id="logo" src="images/logo.png" alt="Reviso logo" /></a>
+
+                <ul id="site-map">
+                    <li ><a href="index.html">Topics</a></li>
+                    <li ><a href="about.html">About</a></li>
+                </ul>
+                
+                <div id="progress-bar"></div>
+
+            </div>
+            
+        </div>
+        
+        <!-- Alert bar. -->
+        <div id="alert-container">
+            <div id="alert-bar">
+                <p id="alert-text"></p><button onclick="hideAlert()">x</button>
+            </div>
+        </div>
+        
+        <!-- Main content block. -->
+        <div class="container">
+            
+            <div class="content-box">
+
+                <div class="header">
+                    <img src="images/topic-headers/css-1.png" class="header-image" alt="'About' header image." />
+                    <h2 >CSS: Basics</h2>
+                </div>
+                
+                <div class="dark">
+                    <p>
+                        Ready your palettes for some pretty-picture-pilates, as we explore how to add an almost essential building block to our websites in the effort to spruce them up with a lick of pristine paint! Cascading <a class="peekable">StyleSheets</a><span>.css</span><span></span> allow you to select one or more of your HMTL elements, and provide rules for how they should be displayed on the screen- this ranges from physical modifications such as size and position, to aesthetic tweaks such as color, rounding and shadows. Covering the basics, we will look at exactly how this format came into being, how it works, and some basic implementations.
+                    </p>
+                </div>
+                
+                <div class="key-points right">
+                
+                    <table class="points">
+                    
+                            <tr><td>CSS 'cascades' down a page of style rules, linking relevant aesthetic instructions with elements.</td></tr>
+                            <tr><td>Clients then do their best to render these rules as faithfully as possible.</td></tr>
+                            <tr><td>There exists a venerable onslaught of complicated modifiers you can use to adapt your styling.</td></tr>   
+                        
+                    </table>
+                
+                </div>
+                
+                <h3>Pizazz!</h3>
+                
+                <img src="images/sections/css/palette.png" alt="An artist's palette." class="left" />
+                
+                <p>
+                    HTML on its own is rendered in an undeniably <em>dull</em> demeanour. CSS allows us to separate our style from our structure, which meets the needs of that design ethos we talked about- a ‘<a href="html-1.html#blocks">separation of concerns</a>’. In this way, we can take an HTML document, and give it an <a href="http://www.mezzoblue.com/zengarden/alldesigns/" target="_blank">infinite amount of different designs</a>- this is particularly useful as it allows for easy, on-the-fly adjustments to presentation, and means that we can freshen up our web-pages at any time without necessarily altering their core structure or <a class="peekable">content</a><span>like redesigning your bedroom, or something</span><span></span>.
+                </p>
+                
+                <p>
+                    Style sheets specify formatting rules which consist of selectors and declarations: in English, you may <a class="peekable">state</a><span>if you think my jokes are bad, by the way, <a href="http://saijogeorge.com/css-puns/" target="_blank">wait til you see these</a>- relevancy!</span><span></span> “<em>I want my paragraphs to be the colour of a blanched almond</em>”, and this translates precisely to:
+                </p>
+                
+                <code class="inline-code"> p { color: BlanchedAlmond; }</code>
+
+            </div>
+            
+            <div class="content-box">
+            
+                <h3>Connecting the dots:</h3>
+                
+                <p>
+                    Stylesheets can be incorporated into your HTML in a multitude of ways: most simplistically, a <code class="inline-code">&lt;style&gt;</code> tag can be employed which reserves a namespace for your CSS rules. These must appear nested within the <code class="inline-code">&lt;head&gt;</code> tag, as this is loaded before the rest of the DOM elements on the page- the browser will want to know how to display elements before actually trying it!
+                </p>
+                
+                <pre><code id="css-1-1-styling" class="load inline-code"></code></pre>
+                
+                <hr />
+                
+                <p>
+                    Alternatively, you can link to an <a class="peekable">external</a><span>this method is preferred, as it keeps a level of separation while keeping your html uncluttered</span><span></span> stylesheet like <a class="peekable">this</a><span>again, included in the head</span><span></span>:
+                </p>
+                          
+                <pre><code id="css-1-2-styling" class="load inline-code"></code></pre>
+            
+            </div>
+            
+            <div class="content-box demo-box">
+                
+                <!-- Inline styling here is used for an example! -->
+                <img src="images/sections/css/inlined.jpg" alt="How to do inline-styles." class="right" style="border-radius: 10px" />
+                
+                <h3>Inline Styling, it's not you, it's me...</h3>
+                
+                <p>
+                    Ok. Ok. So.. ok. <a class="peekable">Inline</a><span><code>&lt;p style="color: BlanchedAlmond"&gt;</code></span><span></span> styling is generally not a great idea for the same reason that nested styling in style tags also mightn’t be a good idea. They clutter the code, and defeat the purpose of CSS, which is to provide re-usable, blanket styling to classed or tagged elements. By being so specific, you make it harder to change the layout of your website at a larger scale. Don’t do this. Please, think of the <a class="peekable">children</a><span><img src="images/sections/css/sad-kid.jpg" alt="A sad child." title="Look what you've done." /></span><span></span>.                
+                </p>
+                
+                <p>
+                    <em>As a disclaimer, when you modify styles with JavaScript when the page has already loaded, you usually add/remove inline styles- this is okay, as those changes are generally flushed upon reload and do not alter any source code. You can see a real example of inline styling by inspecting the image in this section.</em>
+                </p>
+                
+            </div>
+            
+            <div class="content-box">
+            
+                <h3>Selectors:</h3>
+                
+                <p>
+                    Now that we're solidly grounded, it's time for the biggest, <em>best-est</em> bit of CSS; part of being a web-whiz is being able to navigate fluidly through the tree-structure of nodes that comprises your HTML document. This is achieved by almost charting your path through the nodes, separated by spaces, to get to the target destination. This selection path can be fiddled with, but in its basic form, it may look something like this:
+                </p>
+                
+                <p><code class="inline-code css">element-name | #element-id | .class { style: rule; }</code></p>
+                
+                <p>
+                    By only writing an element’s name, you select all instances of that element to style. By using an ID, you select the element with that ID, and by applying style rules to a class (which is what they were made for!) you style any elements classed as such. The path reads from left to right, following a string representation of the nesting of the tree structure- the more elements you provide, the deeper you're going. For example, to select an anchors that are within a paragraph that is within a divider, you'd use: <code class="inline-code css">div p a { ... }</code>.
+                </p>
+                
+                <hr />
+                
+                <h3>Operators:</h3>
+                
+                <div class="key-points right">
+                
+                    <table class="points">
+                    
+                            <tr><td>+</td><td>selects all elements immediately following an element</td></tr>
+                            <tr><td>~</td><td>selects every element preceded by an element</td></tr>
+                            <tr><td>&gt;</td><td>selects all direct children</td></tr>   
+                            <tr><td>*</td><td>selects all elements</td></tr>   
+                        
+                    </table>
+                
+                </div>
+                
+                <p>
+                    To fine-tune your <a class="peekable">selections</a><span>and essentially perform syntactical backflips</span><span></span> to an even greater degree, CSS provides some essential modifiers to the path selection, as well as things called 'pseudo-classes' and even some functions- these are recent developments as a result of CSS3's release, and open some interesting, if a little peculiar opportunities.
+                </p>
+                
+                <img src="images/sections/css/operator.png" alt="A phone operator." class="left" />
+                
+                <p>
+                    Of the most useful are +, ~, &gt; and *. You'll be using them a lot if you want to branch out into more interesting designs. Use the magic box below to experiment with these selectors, and learn by example!
+                </p>
+            
+            </div>
+            
+            <!-- An interactive showcase of the power of CSS selectors! -->
+            <div id="dynamic-selectors" class="content-box-code">
+                
+                <!-- Div contains controls. -->                
+                <div class="right">
+                    
+                    <h3>Testing Selectors</h3>
+                    
+                    <p>
+                        <em>In the box below, you can test your own selection-paths for CSS (it will even highlight the textual content of the elements for you!). Don't be afraid to <a href="http://learn.shayhowe.com/advanced-html-css/complex-selectors/" target="_blank">experiment with crazy combinations</a>!</em>
+                    </p>
+
+                    <input type="text" id="user-selection-path" spellcheck="false" />
+                    
+                    <p id="num-elements">? elements found!</p>
+                    
+                    <div id="css-1-1" class="question"></div>
+                    
+                </div>
+            
+                <pre><code id="css-1-3-dynamicdoc" class="load inline-code"></code></pre>
+                
+            </div>
+            
+            <div class="content-box">
+            
+                <h3>Prevalence:</h3>
+                
+                <img src="images/sections/css/overrwriting.png" alt="Browser displaying how some elements overwrite others." class="right" />
+                
+                <p>
+                    In CSS, as the document cascades <a class="peekable">downwards</a><span>only once!</span><span></span>, style rules applying to the same elements will over-write each-other. Understanding this, you should know that CSS favours style rules declared last, however it also favours specificity, which means that if a rule comes later but is less specific than a previous one, it will not be considered more <a class="peekable">important</a><span>you can actually force a rule to the forefront by appending <code>!important</code> to your rule, however this should be used sparingly for fringe-cases.</span><span></span>. The developer tools of most browsers display rules that are being actively overridden, and allow you to toggle them respectively.
+                </p>
+                
+                <pre><code id="css-1-4-prevalence" class="load inline-code"></code></pre>
+                
+                <div id="example-div">
+                
+                    <div>
+                    
+                        <p>Well howdy! How's it goin', folks? What colour didya think I'd be?</p>
+                    
+                    </div>
+                
+                </div>
+            
+            </div>
+        
+            <!-- Section navigation. -->
+            <a href="index.html" class="nav-button left">Back Home</a>
+            <a href="css-2.html" class="nav-button right">Next</a>
+
+            <!-- Footer consistent per-page. -->
+            <div id="footer">
+
+                <ul id="footer-links">
+
+                    <li><a href="snippet-glossary.html">Code Glossary</a></li>
+                    <li><a href="javascript:toggleSound()">Sound On/Off</a></li>
+                    <li><a href="javascript:viewSource()">View Page Source</a></li>
+                    <li><a href="javascript:viewTerms()">Terms</a></li>
+                    <li>© <a target="_blank" href="http://github.com/JoshHills">Josh 'Averington' Hills</a>, <a target="_blank" href="http://www.symbiopticstudios.co.uk/">Symbiopticstudios</a>, 2015 <a target="_blank" href="http://www.ncl.ac.uk/undergraduate/modules/module/CSC1026/">for Newcastle University</a></li>
+
+                </ul>
+
+            </div>
+            
+        </div>
+
+    </body>
+    
+</html>

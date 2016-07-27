@@ -1,0 +1,167 @@
+/* This stylesheet dictates how the index should respond to size adjustments of the browser or users' screens. The homepage justifies its own specific responsive style-rules due to its abundance of unique content that cannot be compounded with those of the other pages. */
+
+/* If the screen is below 1330 pixels in width, the below style-rules apply. */
+@media screen and (max-width: 1330px) {
+    
+    /* Center elements of the navigation bar. */
+    #nav-container {
+        
+        text-align: center;
+        
+    }
+    
+    /* Hide the extra logo, the screen is now too small. */
+    #logotag {
+        
+        visibility: hidden;
+        
+    }
+    
+    /* Reposition progress bar below. */
+    #progress-bar {
+        
+        height: 25px;
+        width: 100%;
+        position: relative;        
+        top: 45px;
+        
+        padding: 5px;
+        
+        background-color: rgba(230,230,230,.5);
+        
+    }
+    
+    .progress-chunk {
+     
+        background-image: none;
+        
+    }
+    
+    /* Shift container down page to make space for progress bar. */
+    #alert-container {
+        
+        top: 130px;   
+        
+    }
+    
+}
+
+/* If the screen is below 985 pixels in width, the below style-rules apply. */
+@media screen and (max-width: 985px) {
+    
+    .container, .question {
+        
+        /* Align main content to the centre. */
+        text-align: center !important;
+        
+    }
+    
+    /* Hide superfluous graphic */
+    .content-box-anecdote::after {
+        
+        display: none;
+        
+    }
+    
+    h2 {
+        
+        font-size: 40px;
+        
+        white-space: normal;
+        word-wrap: break-word;
+        
+    }
+    
+    /* Reposition and adjust the boundaries of key-points boxes. */
+    .key-points {
+    
+        /* Stop it floating and display it in the center as a block with no margin. */
+        float: none;
+        display: inline-block;
+        margin: 0;
+        
+    }
+    
+    .content-box > img {
+        
+        float: none; 
+        display: inline-block;
+        margin: 0px 0px 20px 0px !important;
+        
+    }
+    
+    .question {
+        
+        float:none;
+        display: inline-block;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        
+    }
+    
+    /* Make this panel the first main element. */
+    #info-panel {
+     
+        text-align: left;
+        float: none;
+        margin: 0;
+        
+    }
+    
+    img.half-fill {
+     
+        visibility: hidden;
+        
+    }
+    
+    p.half-fill {
+     
+        width: auto;
+        
+    }
+    
+}
+
+/* If the screen is below 770 pixels in width, the below style-rules apply. */
+@media screen and (max-width: 770px) {
+    
+    body {
+        
+        padding-top: 185px;   
+        
+    }
+    
+    /* Set new minimum widths- this is the last iteration. */
+    .container { min-width: 385px; }
+    
+    /* Shift container down page to make space for progress bar. */
+    #alert-container {
+        
+        top: 165px;   
+        
+    }
+    
+    #logo { margin: 0; }
+    #site-map { display: list-item; }
+    
+    /* Make them visible. */
+    #site-map > li {
+        
+        background-color: rgb(75,145,65);  
+        
+    }
+    
+    /* Make sure the last button does not have an unnecessary gap for correct centering. */
+    #site-map li:last-child {
+        
+        margin-right: 0;
+        
+    }
+    
+    #progress-bar {
+        
+        top: 10px;   
+        
+    }
+    
+}

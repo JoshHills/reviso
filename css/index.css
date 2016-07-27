@@ -1,0 +1,410 @@
+/* Remove default header styling. */
+h1 {
+
+    margin: 0px;
+    font-weight: normal;
+
+}
+
+/* Restyle horizontal rules to obey site theme. */
+hr {
+
+    border-bottom: 1px #999999;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    
+}
+
+/* Float some visual flair to the empty-space in the navigation bar. */
+#logotag {
+
+    float: right;
+    
+}
+
+    /* PROFILE INFORMATION */
+
+/* Container holds information pertaining to user progress. */
+#info-panel {
+    
+    float: right;
+    margin-left: 80px;
+    
+    /* Ensure it doesn't stretch. */
+    display: inline-block;
+    
+}
+
+#profile-container {
+    
+    padding-top: 30px;
+    padding-bottom: 50px;
+    
+    font-size: 1em;
+    
+    color: #999999;    
+    
+}
+
+#profile-name h1 {
+    
+    display: inline;
+    font-size: 40px;
+    
+}
+
+#profile-name img {
+    
+    float: right;
+    margin-left: 10px;
+    
+}
+
+#streak > * {
+    
+    vertical-align: middle;
+    
+}
+
+#streak p {
+    
+    margin: 0px;
+    display: inline;
+    
+    position: relative;
+    left: 5px;
+    top: 6px;
+    
+    font-size: 30px;
+    
+}
+
+#stat-header p {
+ 
+    display: inline;
+    font-size: 20px;
+    
+}
+
+#arrow-icon {
+
+    float: right;
+    position: relative;
+    bottom: 2px;
+    right: 2px;
+    
+}
+
+/* Stats-box. */
+#data-container {
+
+    padding: 10px;
+    margin-top: 10px;
+    
+    color: #ffffff;
+    
+    background-color: rgb(150,150,150);   
+    
+    box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,.3);
+    
+}
+
+/* Ensure that the table spans the width of the containing div. */
+#statistics {
+
+    width: 100%;
+    
+}
+
+#data-container p {
+    
+    margin: 0px;
+    
+}
+
+/* Reposition link. */
+#data-container a {
+    
+    position: relative;
+    left: 3px;
+    top: 3px;
+    
+}
+
+/* Control width of div. */
+#day-counter {
+    
+    max-width: 265px;   
+    
+}
+
+/* Days-left display. */
+#calendar {
+        
+    float: left;
+    margin-right: 15px;
+    height: 130px;
+    width: 130px;
+    
+    /* Give it a border. */
+    border: 1px solid #999999;
+    border-radius: 15px;
+    
+    /* Give it a shadow. */
+    box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,.25);
+    
+    /* Clip insanely big numbers. */
+    overflow: hidden;
+    
+}
+
+/* Make the text fill the containing div. */
+#calendar p {
+    
+    margin: 0px;
+    position: relative;
+    top: 24px;
+    
+    font-size: 100px;
+    
+    line-height: 130px;
+    text-align: center;
+    color: #4a9240;
+    
+}
+
+/* Style the accompanying text. */
+#day-counter > p {
+    
+    margin: 0px;
+    position: relative;
+    top: 5px;
+    
+    font-size: 19px;
+    
+}
+
+/* Provide visual prompt for more resources. */
+#extra-links {
+    
+    height: 88px;
+    padding: 20px;  
+    /* Place it behind the main profile information. */
+    position: relative;
+    bottom: 75px;
+    z-index: 0;
+        
+    color: #ffffff;
+    text-align: center;
+    
+    /* Set the background image to something relevant. */
+    background-image: url(../images/profile-box/extra-links.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    
+    /* Add an inner shadow and border for emphasis. */
+    box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,1);
+    border-radius: 15px;
+    
+}
+
+#extra-links h1 {
+    
+    position: relative;
+    top: 45px;
+    text-shadow: 0px 0px 5px rgba(1, 1, 1, 1); 
+    
+}
+
+#extra-links p {
+ 
+    position: relative;
+    top: 20px;
+    text-shadow: 0px 0px 5px rgba(1, 1, 1, 1);
+        
+}
+
+/* Content-block encapsulates available revision topics. */
+#topic-container {
+
+    padding: 15px; 
+    /* Ensure that it is at least one element wide. */
+    min-width: 360px;
+    /* Ensure everything is contained within the block. */
+    overflow: hidden;
+    
+    font-size: 1em;
+    
+    /* Center contents. */
+    text-align: center;
+    
+}
+
+/* Topic boxes are self-defined, and styled heavily for re-usability; they contain key descriptive components and are acted upon by the Javascript to provide the user with a wealth of necessary information. */
+.topic-box {
+    
+    /* Give the box a fixed size. */
+    width: 300px;
+    height: 300px;
+    padding: 15px;
+    margin: 15px;
+    
+    /* Display itself in order. */
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+    
+    /* Indicate that the box is interactable. */
+    cursor: pointer;
+    
+    /* Style text for clarity. */
+    color: #ffffff;
+    text-align: left;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.36);
+    
+    /* Allow the box perimeter to act as a mask for the contents. */
+    overflow: hidden;
+    
+    /* Give the box a background and border. */
+    background-color: rgb(75,145,65); 
+    box-shadow: 0px 0px 5px 0.00px rgba(0, 0, 0, 0.41);
+    border-radius: 15px;
+    
+}
+
+.topic-box > img {
+ 
+    /* Position the image correctly. */
+    position: absolute; 
+    top: 0px;
+    left: 0px;
+    
+    /* Define a brightness transition. */    
+    -webkit-filter: brightness(100%);
+	-webkit-transition: -webkit-filter 1s;
+    
+}
+
+/* Dim the image on-hover. */
+.topic-box:hover > img {
+    
+    -webkit-filter: brightness(50%);
+
+}
+
+.topic-details {
+    
+    /* Position descriptive information. */
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    
+}
+
+/* Remove the paragraph margins as they interfere with positioning. */
+.topic-details p, #message-box p {
+    
+    margin: 0px;
+    
+}
+
+.topic-details p {
+    
+    /* Define an opacity transition. */
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+    opacity: 0;   
+    
+}
+
+/* Fade the information in on-hover. */
+.topic-box:hover .topic-details > p {
+    
+    opacity: 1;
+    
+}
+
+/* Provide emphasis to the topic name. */
+.topic-name {
+    
+    position: relative;
+    top: 5px;
+    font-size: 38px;  
+    
+}
+
+.topic-description {
+ 
+    position: relative;
+    top: 10px;
+    font-size: 20px;
+    
+}
+
+.topic-difficulty {
+    
+    position: absolute;
+    bottom: 30px;
+    font-size: 20px;
+    /* Differentiate this fact from the rest. */
+    font-style: italic;
+    
+}
+
+/* Insert a visual-clue before the content to provide extra notation. */
+.topic-difficulty::before {
+    
+    content: "Difficulty: ";   
+    
+}
+
+/* Text to be shown if the user has not revised the topic. */
+.completion-bar p {
+    
+    margin: 0;
+    position: relative;
+    top: 290px;
+    
+    text-align: center;
+    font-size: 20px;
+    text-decoration: underline;
+    
+    visibility: hidden;
+    
+}
+
+.unviewed {
+ 
+    visibility: visible !important;
+    
+}
+
+/* The completion bar indicates the user's progress through a topic, provides a style rule to be easily modified by Javascript for visual indication. */
+.completion-bar img {
+
+    position: absolute; 
+    top: 299px;
+    left: -1px;
+    
+    /* Style mimics a progress bar. */
+    clip: rect(0px,335px,32px,0px);
+    
+}
+    
+/* A more specific variant of the topic-box to provide information to all users. */
+#message-box {
+    
+    color: #999999;
+    text-shadow: none;
+    
+    background-color: transparent;
+    border: 1px solid #999999;
+    
+    /* Reset the inherited cursor-style. */
+    cursor: auto;
+    
+}

@@ -1,0 +1,1 @@
+/* This script handles the initialisation of the unique elements in the website's index- this includes the display of profile information and calculation of the user's topic completion. */

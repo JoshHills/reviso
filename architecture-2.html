@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <head>
+        
+        <title>Web Architecture Closer Look</title>
+        
+        <meta charset="UTF-8" />
+        <meta name="author" content="Josh Hills" />
+        
+        <!-- Import main stylesheet, page-specific stylesheet (if necessary) and a responsive stylesheet. -->
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/main-responsive.css" />
+        <link rel="stylesheet" href="css/sections/architecture/architecture-2.css" />
+        
+            <!-- Load plugins & scripts. -->
+        
+        <!-- jQuery -->
+        <script src="plugins/jquery-1.11.2.min.js"></script> 
+        
+        <!-- Highlight.js -->
+        <script src="plugins/highlight.pack.min.js"></script>
+        <link rel="stylesheet" href="plugins/default.min.css" />
+        
+        <!-- Load external operation scripts. -->
+        <script src="scripts/local-information.js"></script>
+        <script src="scripts/tooltip.js"></script>
+        <script src="scripts/question-classes.js"></script>
+        <script src="scripts/questions/architecture-2.js"></script>
+        <script src="scripts/user-operations.js"></script>
+        <script src="scripts/progress-bar.js"></script>
+        <script src="scripts/page-operations.js"></script>
+        <script src="scripts/sections/architecture-2.js"></script>
+        
+        <!-- Link site's favicon to aid browser display. -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        
+    </head>
+
+    <body id="architecture-2">
+
+        <!-- Navigation bar. -->
+        <div id="nav-container">
+            
+            <div id="nav-bar">
+
+                <a href="index.html"><img id="logo" src="images/logo.png" alt="Reviso logo" /></a>
+
+                <ul id="site-map">
+                    <li><a href="index.html">Topics</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+                
+                <div id="progress-bar" class="right"></div>
+
+            </div>
+            
+        </div>
+        
+        <!-- Alert bar. -->
+        <div id="alert-container">
+            <div id="alert-bar">
+                <p id="alert-text"></p><button onclick="hideAlert()">x</button>
+            </div>
+        </div>
+        
+        <!-- Main content block. -->
+        <div class="container">
+        
+            <div class="content-box">
+
+                <div class="header">
+                    <img src="images/topic-headers/architecture-2.jpg" class="header-image" alt="'About' header image." />
+                    <h2 >Web Architecture: Closer Look</h2>
+                </div>
+                
+                <div class="dark">
+                    <p>
+                        So far we have identified the key building blocks in web architecture- protocols such as HTTP, resources such as <a class="peekable">URIs</a><span>uniform resource identifiers</span><span></span>, HTML, as well as the systems that help implement them such as TCP/IP for functionality and DNS’s for the user. It’s definitely a mouthful, and a lot to retain!<br /><br />
+Therefore, in this section, we’ll explore the requests they make to eachother in more depth, and hopefully by viewing their chatter you’ll understand intricately their inner workings- understanding how to decipher and manipulate HTTP interactions is useful in managing a website.
+                    </p>
+                </div>
+                
+                <h3>Methods:</h3>
+                
+                <div class="key-points right">
+                
+                    <table class="points">
+                    
+                            <tr><td>HTTP is like a translator at an awkward dinner date.</td></tr>
+                            <tr><td>It requests a response using specific modifiers determined by you.</td></tr>
+                            <tr><td>These rigidly structured requests define the kind of data you will receive.</td></tr>
+                        
+                    </table>
+                
+                </div>
+                
+                <p>
+                    Methods specify the kind of <strong>transaction of information</strong> that will be occuring. Use the drop-down menu below to learn more about them!
+                </p>
+                
+                <div id="methods" class="left">
+                    
+                    <!-- Selector to show descriptions of each. -->                    
+                    <select onchange="updateMethodDescription()">
+                        
+                        <option value="head" selected>HEAD</option>
+                        <option value="get">GET</option>
+                        <option value="post">POST</option>
+                        <option value="put">PUT</option>
+                        <option value="delete">DELETE</option>
+                        
+                    </select>
+                    
+                    <!-- Actual hidden descriptions. -->
+                    <div id="head" class="description visible">
+                    
+                        <p>Used for exchanging request/response headers.</p>
+                        <p class="green">Does not change the state of the resource.</p>
+                        <p><strong>Is</strong> necessary.</p>
+                    
+                    </div>
+                    <div id="get" class="description">
+                    
+                        <p>Used to request and return the state and content of a resource.</p>
+                        <p class="green">Does not change the state of the resource.</p>
+                        <p><strong>Is</strong> necessary.</p>
+                    
+                    </div>
+                    <div id="post" class="description">
+                    
+                        <p>Used to process a form input and/or use it's own body to update a resource.</p>
+                        <p class="red">Does change the state of a resource (unsafe).</p>
+                        <p>Is <strong>not</strong> necessary.</p>
+                    
+                    </div>
+                    <div id="put" class="description">
+                    
+                        <p>Used to store entity body contents at the requested URI location (file uploads).</p>
+                        <p class="red">Does change the state of a resource (unsafe).</p>
+                        <p>Is <strong>not</strong> necessary.</p>
+                    
+                    </div>
+                    <div id="delete" class="description">
+                    
+                        <p>Deletes a resource- is the opposite of PUT.</p>
+                        <p class="red">Does change the state of a resource (duh) (unsafe).</p>
+                        <p>Is <strong>not</strong> necessary.</p>
+                    
+                    </div>
+                    
+                </div>
+                
+                <p>
+                    As seen by 'HEAD', headers that act as metadata for the request can also be added- there's a bunch for requests and responses, and they provide additional information about the origin and nature of the data presented, such as the ability to <a class="peekable">constrain</a><span>by applying limits on what can be done with the data, for example</span><span></span>, request additional notifications...
+                </p>
+                
+                <hr />
+                
+                <p>
+                    With that preliminary information covered, how does one actually <em>make</em> an HTTP request? Well, as a web designer you can provide <a class="peekable">forms</a><span>Type a message to display:<br /><input type="text" value="hey there!" class="message" /><input type="button" value="show" onclick='showAlert($(".message").val());' class="message" /></span><span></span> for your users, giving them a friendly front-end that POSTs their information to your systems. Even more simply, you can type an address in the address bar of your browser- in doing so, you'll be using 'GET', a file-path and a protocol. 
+                </p>            
+                
+                <p>
+                    This is why it's called an <strong>URL</strong>! It's a '<strong>Uniform Resource Locator</strong>' split into chunks by your client and sent away using protocols...
+                </p>
+                
+            </div>
+            
+            <div class="content-box demo-box">
+                
+                <img src="images/sections/architecture/lightbulb-icon.png" class="right" />
+            
+                <h3>Formatted Example URI:</h3>
+                
+                <p>
+                    <a class="peekable">https:</a><span>scheme the request will use to retrieve the information</span><span></span>
+                    <a class="peekable">//www.google.co.uk</a><span>authority to be converted into an ip address by a dns</span><span></span>
+                    <a class="peekable">/search</a><span>path to the desired file/page</span><span></span>
+                    <a class="peekable">?q=reviso</a><span>appended query</span><span></span>
+                    
+                     : This will generate a GET request with a path and protocol, along with some general headers.
+                </p>
+            
+            </div>
+            
+            <div class="content-box">
+                
+                <div class="key-points right">
+                
+                    <table class="points">
+                    
+                            <tr><td>Class</td><td>Range</td></tr>
+                            <tr><td>Information</td><td>1XX</td></tr>
+                            <tr><td>Success</td><td>2XX</td></tr>
+                            <tr><td>Redirection</td><td>3XX</td></tr>
+                            <tr><td>Client Error</td><td>4XX</td></tr>
+                            <tr><td>Server Error</td><td>5XX</td></tr>
+                        
+                    </table>
+                
+                </div>
+            
+                <h3>Responses:</h3>
+                
+                <p>
+                    After you make the request, the server responds with it's own general headers, and, if you made a 'GET' request, some <a class="peekable">content</a><span>the body of a webpage, for example</span><span></span>! Hooray! To help understand what has happened, also provided is a <a class="peekable">status</a><span>e.g. <code>HTTP/1.1 200 OK</code></span><span></span> line with a response code and message; these inform of you of the <a class="peekable">outcome</a><span>there are 41 in total</span><span></span> of your request.
+                </p>
+                
+                <hr />
+                
+                <p>
+                    As a web-developer, your task, along with knowing all of this stuff (or knowing how to re-attain it after you've forgotten it) is usually to provide a user-friendly platform for others to take advantage of your services- whether this manifests as a website or application. Instead of seeing a blank screen or a slew of jargon, when something goes wrong it's desirable to let somebody know why. This is sometimes <a class="peekable">handled</a><span><img src="images/sections/architecture/dinosaur.png" alt="Chrome's dinosaur game." /></span><span></span> by the client, however websites also sometimes recognize these errors and <a href="http://www.hongkiat.com/blog/60-really-cool-and-creative-error-404-pages/" target="_blank">display some interesting fallbacks of their own</a>.
+                </p>
+            
+            </div>
+            
+            <div id="random-responses" class="content-box-code">
+                
+                <h3 id="status">404</h3>
+                <p id="status-description">Requested resource could not be found.</p>
+                <input type="button" value="Generate a random response code." id="response-generator" onclick="generateRandomStatusCode()" />
+            
+            </div>
+            
+            <div id="questions" class="content-box">
+            
+                <div id="architecture-2-1" class="question"></div>
+                <div id="architecture-2-2" class="question"></div>
+                <div id="architecture-2-3" class="question"></div>
+            
+            </div>
+            
+            <!-- Section navigation. -->
+            <a href="architecture-1.html" class="nav-button left">Back</a>
+            <a href="architecture-3.html" class="nav-button right">Next</a>
+
+            <!-- Footer consistent per-page. -->
+            <div id="footer">
+
+                <ul id="footer-links">
+
+                    <li><a href="snippet-glossary.html">Code Glossary</a></li>
+                    <li><a href="javascript:toggleSound()">Sound On/Off</a></li>
+                    <li><a href="javascript:viewSource()">View Page Source</a></li>
+                    <li><a href="javascript:viewTerms()">Terms</a></li>
+                    <li>© <a target="_blank" href="http://github.com/JoshHills">Josh 'Averington' Hills</a>, <a target="_blank" href="http://www.symbiopticstudios.co.uk/">Symbiopticstudios</a>, 2015 <a target="_blank" href="http://www.ncl.ac.uk/undergraduate/modules/module/CSC1026/">for Newcastle University</a></li>
+
+                </ul>
+
+            </div>
+    
+        </div>
+            
+    </body>
+    
+</html>

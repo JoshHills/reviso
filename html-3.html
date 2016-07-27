@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <head>
+        
+        <title>HTML Closer Further</title>
+        
+        <meta charset="UTF-8" />
+        <meta name="author" content="Josh Hills" />
+        
+        <!-- Import main stylesheet, page-specific stylesheet (if necessary) and a responsive stylesheet. -->
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/main-responsive.css" />
+        <link rel="stylesheet" href="css/sections/html/html-3.css" />
+        
+            <!-- Load plugins & scripts. -->
+        
+        <!-- jQuery -->
+        <script src="plugins/jquery-1.11.2.min.js"></script> 
+        
+        <!-- Highlight.js -->
+        <script src="plugins/highlight.pack.min.js"></script>
+        <link rel="stylesheet" href="plugins/default.min.css" />
+        
+        <!-- Three.js -->
+        <script src="plugins/three.min.js"></script>
+        <script src="scripts/sections/html-3.js"></script>
+        
+        <!-- Load external operation scripts. -->
+        <script src="scripts/local-information.js"></script>
+        <script src="scripts/tooltip.js"></script>
+        <script src="scripts/question-classes.js"></script>
+        <!-- <script src="scripts/questions/html-2.js"></script> -->
+        <script src="scripts/user-operations.js"></script>
+        <script src="scripts/progress-bar.js"></script>
+        <script src="scripts/page-operations.js"></script>
+        
+        <!-- Link site's favicon to aid browser display. -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        
+    </head>
+
+    <body id="html-3">
+
+        <!-- Navigation bar. -->
+        <div id="nav-container">
+            
+            <div id="nav-bar">
+
+                <a href="index.html"><img id="logo" src="images/logo.png" alt="Reviso logo" /></a>
+
+                <ul id="site-map">
+                    <li ><a href="index.html">Topics</a></li>
+                    <li ><a href="about.html">About</a></li>
+                </ul>
+                
+                <div id="progress-bar"></div>
+
+            </div>
+            
+        </div>
+        
+        <!-- Alert bar. -->
+        <div id="alert-container">
+            <div id="alert-bar">
+                <p id="alert-text"></p><button onclick="hideAlert()">x</button>
+            </div>
+        </div>
+        
+        <!-- Main content block. -->
+        <div class="container">
+            
+            <div class="content-box">
+
+                <div class="header">
+                    <img src="images/topic-headers/html-3.png" class="header-image" alt="'About' header image." />
+                    <h2 >HTML: Further</h2>
+                </div>
+                
+                <div class="dark">
+                    
+                    <p>
+                        Now that we’ve looked at the intricacies of HTML, it’s time to explore the last few finicky tags you’ll <strong>definitely</strong> need in your quest to populate the web with your ponderings, as well as a couple of new concepts and a thoughtful look further.
+                    </p>
+                    
+                    <p>
+                        When adding content to your website, you’re going to want to add media elements, as multi-modality almost always <a class="peekable">bolsters</a><span>to keep people engaged with interaction, so it's not just a static pool of information</span><span></span> user-experience.  You’ll also want to cast a semantic net over certain parts of your content sometimes, to group them together. <em>Sally forth</em>!
+                    </p>
+                    
+                </div>
+                
+                <h3>Howay man, ya div!</h3>
+                
+                 <div class="key-points right">
+                
+                    <table class="points">
+                    
+                            <tr><td>HTML of the future is incorporating lots of exciting new elements (both literally and figuratively).</td></tr>
+                            <tr><td>These elements take advantage of file-formats to improve presentation and interactivity.</td></tr>
+                        
+                    </table>
+                
+                </div>
+                
+                <p>
+                    On the surface, structurally grouping your content has no visual effect. However, it does allow you get very specific- by doing this, you can target your own content with stylesheets and with scripts. At <em>tag-level</em>, you can do this by providing them with <strong>ids</strong> and <strong>classes</strong>, however if we’re thinking <a class="peekable">big</a><span>we’re always thinking big</span><span></span>, <code class="inline-code">div</code> and <code class="inline-code">span</code> tags can be used to capture content, to provide an underlying <em>framework for interactivity</em> once the other building blocks come together.
+                </p>
+                
+                <p>
+                    '<a class="peekable">Divs</a><span>short for ‘divisions’</span><span></span>' are used for block-level tags, and 'spans' are used for inline-elements. This is an exercise in customisation, as you’ll determine yourself where, what and when to take advantage of these constructs- and it’s always good to plan ahead.
+                </p>
+                
+                <p>
+                    Getting all meta for a moment, in this page I wrap the content blocks in individual 'div' tags, for a level of separation that not only helps <a class="peekable">me</a><span>and the markers (*wink wink*)</span><span></span> traverse the code, but also allows me to provide specific unique styling to certain bits. Additionally, if you have a slew of linked text, you may want to put it inside of a span, as if you ever need to mess with that particular bit then it’s enclosed and easily accessible.
+                </p>
+                
+            </div>
+            
+            <div class="content-box">
+            
+                <h3>That’s class, that like!</h3>
+                
+                <p>
+                    Let’s talk more about classes. At the moment, oddly, they serve as a bit of a placeholder for <a class="peekable">things</a><span>css</span><span></span> to come. You’d class an element as something because it fits into a specific category- this, like ‘ids’, allows you to more accurately single it out in code later.
+                </p>
+                
+                <div class="dark">
+                
+                    <p>
+                        To make this more relatable, say you wrote a script that would siphon all person-names from a page: you may then write something to the tune of <code class="inline-code">&lt;span class=”person”&gt;Chris Sawyer&lt;/span&gt;</code>. Okay, running with that, let’s tangentially say that we only want to extract names from a specific area of the page- you could wrap that section in a ‘div’ like so: <code class="inline-code">&lt;div id=”name-area”&gt;elements&lt;/div&gt;</code>, which could define a scope of operation.
+                    </p>
+                
+                </div>
+                
+                <p>
+                    <strong><em>Note: classes should be used when you want multiple elements to be grouped as such or abide by a rule, identifiers should be unique, occuring only once.</em></strong>
+                </p>
+            
+            </div>
+            
+            <div class="content-box">
+            
+                <h3>That's rich!</h3>
+                
+                <p>
+                    This is a fun one- I hope you’re excited. Life without anything artistic is seldom interesting, so it’s no surprise that the nicest websites you’ve visited have, without a doubt, been full of pictures and the <a class="peekable">likes</a><span>known as 'rich content'</span><span></span>. The rule of thumb is that browsers <a href="http://caniuse.com/" target="_blank">mightn’t support anything more than text as law</a>, however most still provide native support- HTML5 is pushing for an expansion of this native support to cover video, and even eventually rendering of formats such as <a href="https://get.webgl.org/" target="_blank">OpenGL</a>.
+                </p>
+                
+                <hr />
+            
+                <h3>Images:</h3>
+                
+                <img src="images/sections/html/artsy-photograph.jpg" alt="An artsy photograph." title="#nofilter" width="600" height="400" class="right" />
+                
+                <p>
+                    Time to get hipster up in here: this is going to feel very similar to the <a href="html-2.html#links">‘links’ section</a> on the previous page, insomuch as to create a fully-fleshed image you must make an <code class="inline-code">&lt;image&gt;</code> tag, tell it to point to something, and then if necessary add extra descriptive information:
+                </p>
+                
+                <p><code class="inline-code">&lt;img src=”images/sections/html/artsy.jpeg" alt=”An artsy photograph.” title=”#nofilter” width=”600” height=”400” /&gt;</code></p>
+                
+                <p>
+                    This produces the image shown in this div. <strong>Alt</strong> provides some text to display should the picture fail to link correctly:<br /><br />
+                    <img src="" alt="An artsy photograph." title="This appears when it can't load the image!" /><br /><br />
+                    <strong>Title</strong> generally provides extra information on-hover, which is sometimes helpful. As you can see, the <em>height</em> and <em>width</em> can also be specified.
+                </p>
+                
+                <h3>Formats:</h3>
+                
+                <p>
+                    Let’s take a scenic foray into the world of <em>image-file-formats</em>. It’s useful to know how certain embedded medias will work in your website to determine which is the most appropriate to use. The legendary ‘<a class="peekable">.gif</a><span>graphics interchange format, introduced by 'compuserve' in 1987</span><span></span>’, although incredibly portable and <strong>animated</strong>, is being phased out in favour of formats such as ‘<a href="http://www.webmproject.org/" target="_blank">webm</a>’, which provide higher quality at a <a class="peekable">smaller</a><span>the best of both worlds!</span><span></span> size.
+                </p>
+                
+                <p>
+                    The hardy <strong>JPEG</strong> is a solid all-rounder, as you can compress hugely without losing any quality; however, my favourite is the <strong>PNG</strong>, and like any favourite, it’s about to get some special <em>attention</em>..
+                </p>
+                
+            </div>
+            
+            <div class="content-box demo-box">
+            
+                <h3>The PNG:</h3>
+                
+                <div class="dark">
+                
+                    <p>
+                        If file formats had a superhero origin story, this one’d get the best critic-score. The original specification was authored by an ad-hoc group of computer graphics experts and enthusiasts, who convened exclusively via e-mail. There’s also an extension to png that allows it to animate. Spectacular!
+                    </p>
+                
+                </div>
+                
+                <p>
+                    The '<a class="peekable">.png</a><span>portable network graphic</span><span></span>' came as a result of the GIF’s <a href="http://cloanto.com/users/mcb/19950127giflzw.html" target="_self">patent-problems</a>- this file format is free to use, supports <a class="peekable">lossless</a><span>with less artefacts than jpeg</span><span></span> compression, <em>and</em> a full-color palette with an optional alpha channel, meaning there can be <a class="peekable">transparent</a><span><img src="images/sections/html/transparency.png" alt="Transparent area in editing software." /></span><span></span> areas! So, <strong>super</strong> high quality, super useful, and super free-<em> *ding* *ding* *ding*</em>.
+                </p>
+            
+            </div>
+            
+            <div class="content-box-anecdote">
+            
+                <h3>Exciting Applications:</h3>
+                
+                <p>
+                    Interestingly, the web is becoming less about the information presented and more about what you can do with this information- delivering online, in-client applications that allow users to generate their own content. Virtual, cloud-based software such as '<a href="http://www.gravit.io/" target="_blank">Gravit</a>' by '<a href="http://quasado.com/" target="_blank">Quasado</a>' actually provides the user with an interactive space that rivals traditional software! I'm employing a lot of buzz-words here, but they aren't <em>hollow</em>.
+                </p>
+                
+                <img src="images/sections/html/gravit.jpg" alt="A demonstration of the web-app 'Gravit'." />
+                
+                <p>
+                    Brandon Satrom described HTML5 eloquently on his post on the developer forums at Microsoft: "<em>You might have discovered by now that HTML5 means different things to different people. To some, it just means new tags like 'header' and 'footer' and a handful of new attributes available in markup. To others, <strong>it means everything that’s new and interesting on the Web</strong>, including technologies implemented in just a single browser or other specifications not officially part of HTML5. To be sure, understanding the real meaning of HTML5 is often the first roadblock many of us face.<br /><br />
+
+                    And, honestly, there’s some justification for the number of varying definitions. HTML5 is huge! Formally defined by an international standards body known as the World Wide Web Consortium (W3C), HTML5 consists of more than 100 specifications that relate to the next generation of Web technologies. By putting all 100-plus of these specifications under the moniker HTML5, you could argue that the W3C oversimplified things. And while it’s hard to take something as broad as HTML5 and define it in an unambiguous way, I believe that the W3C was trying to address the scope of what’s changing on the Web by introducing HTML5 as a unifying concept for that change.</em>".
+                </p>
+                
+                <p>
+                    Clearly, this shift in overall attitude to what should be part of the web is changing- increasingly, we're able to forego programming in favour of an almost recursive display of app-creation- by creating an application <em>for</em> HTML5, in an in-browser application <em>made</em> in HTML5. It's like getting 3D printers to print more 3D printers!
+                </p>
+            
+            </div>
+            
+            <div id="html5" class="content-box">
+            
+                <h3>HTML5:</h3>
+                
+                <p>
+                    <em>No other initialism is currently met with such reverence as ‘HTML5’. HTML5 heralds a new dawn. New opportunities. New new-ness.</em>         
+                </p>
+                
+                <p>
+                    But seriously, with HTML5 becoming the <a class="peekable">benchmark</a><span><span></span>catch up, microsoft, you dingbats</span><span></span> for web-development, it’s making it ever-increasingly simple to include extra media in your websites. Things such as ‘video’ and ‘canvas’ elements provide a more specific approach to replace the now inconvenient ‘object’ and ‘embed’ tags- they require less specification and adjustment to work out of the box.
+                </p>
+                
+                <p>
+                    The future is exciting, no?
+                </p>
+            
+            </div>
+            
+            <div class="content-box-code" id="three">
+                
+                <h3>Look at this cube.</h3>
+                
+                <p>
+                    <em>This cube is special, and it mightn't be apparent why, at first. This cube is being rendered in 3d, in real-time, in-browser! It's using a javascript plugin that takes advantage of 'webGL', and although this is simple, the applications are astronomically exciting.</em>
+                </p>
+            
+                <!-- HTML5 compatible showcase here! -->
+                
+            </div>
+            
+            <!-- Section navigation. -->
+            <a href="html-2.html" class="nav-button left">Back</a>
+            <a href="standards-1.html" class="nav-button right">Next Topic</a>
+
+            <!-- Footer consistent per-page. -->
+            <div id="footer">
+
+                <ul id="footer-links">
+
+                    <li><a href="snippet-glossary.html">Code Glossary</a></li>
+                    <li><a href="javascript:toggleSound()">Sound On/Off</a></li>
+                    <li><a href="javascript:viewSource()">View Page Source</a></li>
+                    <li><a href="javascript:viewTerms()">Terms</a></li>
+                    <li>© <a target="_blank" href="http://github.com/JoshHills">Josh 'Averington' Hills</a>, <a target="_blank" href="http://www.symbiopticstudios.co.uk/">Symbiopticstudios</a>, 2015 <a target="_blank" href="http://www.ncl.ac.uk/undergraduate/modules/module/CSC1026/">for Newcastle University</a></li>
+
+                </ul>
+
+            </div>
+            
+        </div>
+
+    </body>
+    
+</html>

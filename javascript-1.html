@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <head>
+        
+        <title>JavaScript Basics</title>
+        
+        <meta charset="UTF-8" />
+        <meta name="author" content="Josh Hills" />
+        
+        <!-- Import main stylesheet, page-specific stylesheet (if necessary) and a responsive stylesheet. -->
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/main-responsive.css" />
+        <link rel="stylesheet" href="css/sections/javascript/javascript-1.css" />
+        
+            <!-- Load plugins & scripts. -->
+        
+        <!-- jQuery -->
+        <script src="plugins/jquery-1.11.2.min.js"></script> 
+        
+        <!-- Highlight.js -->
+        <script src="plugins/highlight.pack.min.js"></script>
+        <link rel="stylesheet" href="plugins/default.min.css" />
+        
+        <!-- Load external operation scripts. -->
+        <script src="scripts/local-information.js"></script>
+        <script src="scripts/tooltip.js"></script>
+        <script src="scripts/question-classes.js"></script>
+        <script src="scripts/questions/javascript-1.js"></script>
+        <script src="scripts/user-operations.js"></script>
+        <script src="scripts/progress-bar.js"></script>
+        <script src="scripts/page-operations.js"></script>
+        <script src="scripts/sections/javascript-1.js"></script>
+        
+        <!-- Link site's favicon to aid browser display. -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        
+    </head>
+
+    <body id="javascript-1">
+
+        <!-- Navigation bar. -->
+        <div id="nav-container">
+            
+            <div id="nav-bar">
+
+                <a href="index.html"><img id="logo" src="images/logo.png" alt="Reviso logo" /></a>
+
+                <ul id="site-map">
+                    <li ><a href="index.html">Topics</a></li>
+                    <li ><a href="about.html">About</a></li>
+                </ul>
+                
+                <div id="progress-bar"></div>
+
+            </div>
+            
+        </div>
+        
+        <!-- Alert bar. -->
+        <div id="alert-container">
+            <div id="alert-bar">
+                <p id="alert-text"></p><button onclick="hideAlert()">x</button>
+            </div>
+        </div>
+        
+        <!-- Main content block. -->
+        <div class="container">
+            
+            <div class="content-box">
+
+                <div class="header">
+                    <img src="images/topic-headers/javascript-1.png" class="header-image" alt="'About' header image." />
+                    <h2 >JavaScript: Basics</h2>
+                </div>
+                
+                <div class="dark">
+                    
+                    <p>
+                        <strong>Attention: This topic assumes some casual pre-existing knowledge of programming concepts. No dice? Go edumacate yourself!</strong>
+                    </p>
+                    
+                    <p>
+                        You see that light on the horizon? You’ve finally made it to the end-of-the-line, and there’s no better topic in which to go out with a bang. Here, I’ll provide a brief run-down of the last building-block composing modern websites, which adds the last key step of functionality- interactivity. JavaScript Is a broad subject to cover, and can be looked at on a microcosmic scale if such a thing took your fancy. For the purposes of revision, I’ll touch on the most important relevent elements, such as how to include it in your website, what it does on a basic level, and then provide some catalysts for further reading. Are you <a class="peekable">excited</a><span>i'm excited!!</span><span></span>?                    
+                    </p>
+                    
+                </div>
+                
+                <div class="key-points right">
+                
+                    <table class="points">
+                    
+                            <tr><td>JavaScript is the last piece of the puzzle.</td></tr>
+                            <tr><td>It enables a greater depth of interaction for the users of your website.</td></tr>
+                            <tr><td>The possibilities are endless, and as a result there's a lot to know.</td></tr>  
+                        
+                    </table>
+                
+                </div>
+                
+                <p>
+                    JavaScript is a scripting language that executes <em>in</em> your Web Browser- it is embedded in your files, and has many favourable features for web-development; it’s <a class="peekable">dynamically typed</a><span>this makes it very relaxed, which is both a curse and a blessing as debugging can be hard to get to grips with</span><span></span>, meaning you  don’t have to specify what kinds of variables you are creating. It was introduced from a <a href="http://www.w3.org/community/webed/wiki/A_Short_History_of_JavaScript" target="_blank">dualistic background of development</a> by both <strong>Microsoft</strong> and <strong>Sun</strong>, and allows a user to interact with the DOM.
+                </p>
+                
+                <p>
+                    This is incredibly important, as it transforms your now pretty-looking, relatively static web-pages into applications. At a basic level, like other programming-languages, you can create variables and logical constructs, as well as functions; what you do inside these is literally limitless- you can register event-listeners to react to changes in the web-page, which may encompass anything from creating a game to processing form <a class="peekable">informaton</a><span>quite effectively too, with tools such as ‘<a href="javascript-1.html#regex" target="_self">regex</a>’</span><span></span>.
+                </p>
+
+                <pre><code id="javascript-1-1-example" class="load inline-code"></code></pre>
+                
+                <input type="button" name="alerter" value="onclick='exampleFunction()'" onclick="exampleFunction()" />
+
+            </div>
+            
+            <div class="content-box">
+            
+                <h3>Gimme!</h3>
+                
+                <p>
+                    Similar to CSS, including javascript in your website can be done by actually including the code in your document’s <a class="peekable">head</a><span>to load before the dom loads</span><span></span> or <a class="peekable">body</a><span>to load after the body has loaded</span><span></span> using <code class="inline-code">&lt;script&gt;</code> tags, however it’s better practice, especially with larger files, to link to them externally:
+                </p>
+                
+                <code class="inline-code">&lt;script src=&quot;scripts/sections/javascript-1.js&quot;&gt;&lt;/script&gt;</code>
+                
+                <p>
+                    <em>You can see a bunch of intialisation scripts loaded into this page in the source!</em>
+                </p>
+                
+                <p>
+                    As for interacting with your code, you can output to the console with<code class="inline-code"> console.log(string);</code>, and actually run functions by <a class="peekable">name</a><span>running using parentheses, and retrieiving the literal function-as-string by omitting them</span><span></span>. If you want to take a look at the javascript model of your user-profile (and even tweak it, you cheater), you can type ‘user’ into the console and mess with the object it returns!
+                </p>
+            
+            </div>
+            
+            <div class="content-box">
+            
+                <h3>DOM Interaction:</h3>
+                
+                <div id="javascript-1-1" class="question right"></div>
+                
+                <p>
+                    Being able to navigate through the DOM in javascript is kindred to navigating your computer’s filesystem using the terminal, only slightly more confusing.
+                </p>
+                
+                <p>
+                    Without necessarily knowing the direct route to an element via the heirarchy, there are several functions you should memorise (they're all pretty self-explanatory):
+                </p>
+                
+                <p><code class="inline-code">document.getElementById()</code></p>
+                <p><code class="inline-code">document.getElementsByClassName()</code></p>
+                <p><code class="inline-code">document.getElementsByName()</code></p>
+                <p><code class="inline-code">document.getElementsByTagName()</code></p>
+                
+                <p>
+                    The query selector lets you use CSS-style targeting to find and return elements:
+                </p>
+                
+                <p><code class="inline-code">document.querySelector()</code></p>
+                
+                <hr />
+                
+                <p>
+                    <em>A more comprehensive list <a href="http://javascript.info/tutorial/traversing-dom" target="_blank">can be found here</a>!</em>
+                </p>
+            
+            </div>
+            
+            <div class="content-box demo-box">
+                
+                <h3>Regular Expressions:</h3>
+                
+                <p>
+                    These provide a standardised method of pattern matching for text- they’re like search criteria to draw substrings from content in JavaScript- they are usful in validation. To construct a ‘regexp’, you concoct a string of <a href="http://www.debuggex.com/cheatsheet/regex/javascript" target="_blank">meta-characters</a> that have specific meanings, best outlined in the cheat-sheet here. Now you know of their existence, when you inevitable come across a reason to use them you should know of a means to solve your problem!
+                </p>
+                
+            </div>
+            
+            <div class="content-box-anecdote">
+            
+                <h3>Graceful Degradation:</h3>
+                
+                <p>
+                    Having meandered over some quick basics of JavaScript, we should take that backseat to chat about good practices. The big issue with including script-functionality in a web-page is that it shouldn’t be dependent upon it if you still want to convey information alongside it- this is because, if it breaks or there are any compatibility issues from your users, it will not degrade helpfully! By scripting <a class="peekable">practically</a><span>using tools wisely, adopting other frameworks...</span><span></span>, you should foster unobtrusive code that lends itself well to graceful degradation.
+                </p>
+                
+                <p>
+                    This is especially important when utilising <a class="peekable">plugins</a><span>other people's code-libraries that do useful jobs for you</span><span></span>, as they aren't maintained by you- you never know when something could go wrong!
+                </p>
+                    
+            </div>
+        
+            <!-- Section navigation. -->
+            <a href="index.html" class="nav-button left">Back Home</a>
+
+            <!-- Footer consistent per-page. -->
+            <div id="footer">
+
+                <ul id="footer-links">
+
+                    <li><a href="snippet-glossary.html">Code Glossary</a></li>
+                    <li><a href="javascript:toggleSound()">Sound On/Off</a></li>
+                    <li><a href="javascript:viewSource()">View Page Source</a></li>
+                    <li><a href="javascript:viewTerms()">Terms</a></li>
+                    <li>© <a target="_blank" href="http://github.com/JoshHills">Josh 'Averington' Hills</a>, <a target="_blank" href="http://www.symbiopticstudios.co.uk/">Symbiopticstudios</a>, 2015 <a target="_blank" href="http://www.ncl.ac.uk/undergraduate/modules/module/CSC1026/">for Newcastle University</a></li>
+
+                </ul>
+
+            </div>
+            
+        </div>
+
+    </body>
+    
+</html>
